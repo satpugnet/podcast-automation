@@ -98,6 +98,3 @@ def generate_voice_preview(character_name):
                     print(f"Please enter a number between 1 and {len(previews_response.previews)}")
             except ValueError:
                 print("Invalid input. Please enter a number or 'r'")
-
-if __name__ == "__main__":
-    generate_voice_preview("Napoleon Bonaparte")
