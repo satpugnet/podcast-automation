@@ -21,7 +21,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-
+outp
 # Environment variables
 .env
 .env.*
