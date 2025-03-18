@@ -108,3 +108,43 @@ A fully automated podcast where an inquisitive Time Traveler named Leo meets hum
 ---
 
 **Enjoy your journey through time with Leo! 🌌**
+
+
+
+---
+
+## Leo Voice Design Prompt
+
+Design a voice profile for Leo, a young, enthusiastic, and adventurous time traveler, hosting lively conversations with historical figures. Leo's voice should embody youthful excitement, boundless energy, gentle innocence, and authentic curiosity—like a spirited explorer thrilled by each new discovery. His tone is clear, friendly, and full of genuine wonder, blending playful naivety with intellectual humility and subtle humor. Listeners should feel inspired by Leo's infectious enthusiasm, making every historical adventure feel vibrant and fun.
+
+Voice Qualities:
+	•	High-energy & Excited
+	•	Youthful & Playful
+	•	Gently Naive & Innocent
+	•	Friendly & Approachable
+	•	Clear & Energetic
+	•	Authentically Curious
+	•	Warmly Humorous
+	•	Adventurous Spirit
+
+---
+
+## Prompt for In-Depth Research and Concise Summary of Historical Figure
+
+Task:
+Conduct extensive and detailed research on the historical figure provided for an history Podcast. Gather information from reliable historical resources, biographies, academic publications, and reputable articles. Focus your research on uncovering fascinating, lesser-known details, key life events, significant achievements, controversies, personal anecdotes, pivotal struggles, character traits, and the broader historical impact of this person.
+
+	After thorough research, generate a clear, concise, structured summary of the most compelling and podcast-friendly facts, organized as follows:
+
+	1. Brief Biography (2-3 sentences, summarizing life and major accomplishments)
+2. Interesting Personal Traits and Anecdotes (list ~3-5 unique, intriguing points)
+3. Key Achievements and Innovations (list ~3-5 significant achievements and contributions)
+4. Major Life Challenges and Struggles (briefly describe ~2-4 impactful events or challenges)
+5. Lesser-Known Facts and Stories (list ~2-4 captivating, less commonly known facts)
+6. Historical Context and Broader Impact (briefly explain the historical significance and lasting influence of this figure)
+
+	Ensure all information is concise yet sufficiently detailed to provide meaningful and engaging podcast content. The output should directly enable another LLM to integrate these fascinating insights into a dynamic and immersive podcast conversation between Leo and the historical figure.
+
+	Historical Figure:
+[Insert Historical Figure Name Here]
+

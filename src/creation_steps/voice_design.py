@@ -93,7 +93,7 @@ def generate_voice_preview(character_name):
                     )
 
                     logging.info(f"Historical voice creation completed. New Voice ID: {voice_response.voice_id}")
-                    return
+                    return voice_response.voice_id
                 else:
                     print(f"Please enter a number between 1 and {len(previews_response.previews)}")
             except ValueError:

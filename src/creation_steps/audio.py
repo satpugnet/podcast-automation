@@ -3,11 +3,10 @@ import json
 import time
 from pathlib import Path
 from pydub import AudioSegment
-from elevenlabs import generate, set_api_key, save
-from elevenlabs.api import Voices
+from elevenlabs import ElevenLabs
 from dotenv import load_dotenv
 
-def generate_podcast_audio(script_path, output_dir="output/audio"):
+def generate_podcast_audio(script, guest_voice_id, output_dir):
     """
     Generate audio for a podcast script using ElevenLabs API
     
@@ -22,68 +21,55 @@ def generate_podcast_audio(script_path, output_dir="output/audio"):
     load_dotenv()
     
     # Get API key from environment variables
-    api_key = os.getenv("ELEVENLABS_API_KEY")
+    api_key = os.getenv("ELEVEN_LABS_API_KEY")
     if not api_key:
-        raise ValueError("ELEVENLABS_API_KEY not found in environment variables")
+        raise ValueError("ELEVEN_LABS_API_KEY not found in environment variables")
     
-    # Set the API key
-    set_api_key(api_key)
+    # Initialize ElevenLabs client
+    client = ElevenLabs(api_key=api_key)
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "segments"), exist_ok=True)
     
-    # Load the script
-    with open(script_path, 'r', encoding='utf-8') as f:
-        script = json.load(f)
-    
-    # Get available voices
-    available_voices = Voices.from_api()
-    
-    # Select voices for different speakers
-    voice_mapping = {
-        "Narrator": "Adam",  # For intro and outro
-        "Leo": "Josh",       # Time traveler
-        script["historical_figure"]: "Arnold"  # Historical figure
+    # Define voice IDs for each speaker
+    voice_ids = {
+        "Narrator": "NOpBlnGInO9m6vDvFkFC",  # Adam voice for intro and outro
+        "Leo": "v2YwWtvprj8WUvzb7D4K", 
+        script["historical_figure"]: guest_voice_id
     }
-    
-    # Map voice names to voice IDs
-    voice_ids = {}
-    for role, voice_name in voice_mapping.items():
-        for voice in available_voices:
-            if voice.name.lower() == voice_name.lower():
-                voice_ids[role] = voice.voice_id
-                break
-        if role not in voice_ids:
-            print(f"Warning: Voice '{voice_name}' not found for {role}. Using default voice.")
-            # Use the first available voice as default
-            voice_ids[role] = available_voices[0].voice_id
-    
     # Generate audio segments
     audio_segments = []
     segment_paths = []
     
     # Process intro
     print(f"Generating audio for intro...")
-    intro_path = os.path.join(output_dir, "intro.mp3")
-    intro_audio = generate(
+    intro_path = os.path.join(output_dir, "segments/intro.mp3")
+    intro_audio = client.text_to_speech.convert(
         text=script["intro"],
-        voice=voice_ids["Narrator"],
-        model="eleven_multilingual_v2",
+        voice_id=voice_ids["Narrator"],
+        model_id="eleven_multilingual_v2",
         output_format="mp3_44100_128"
     )
-    save(intro_audio, intro_path)
+    # Convert generator to bytes
+    intro_audio_bytes = b"".join(list(intro_audio))
+    with open(intro_path, "wb") as f:
+        f.write(intro_audio_bytes)
     segment_paths.append(intro_path)
     
     # Process arrival scene
     print(f"Generating audio for arrival scene...")
-    arrival_path = os.path.join(output_dir, "arrival_scene.mp3")
-    arrival_audio = generate(
+    arrival_path = os.path.join(output_dir, "segments/arrival_scene.mp3")
+    arrival_audio = client.text_to_speech.convert(
         text=script["arrival_scene"],
-        voice=voice_ids["Narrator"],
-        model="eleven_multilingual_v2",
+        voice_id=voice_ids["Narrator"],
+        model_id="eleven_multilingual_v2",
         output_format="mp3_44100_128"
     )
-    save(arrival_audio, arrival_path)
+    # Convert generator to bytes
+    arrival_audio_bytes = b"".join(list(arrival_audio))
+    with open(arrival_path, "wb") as f:
+        f.write(arrival_audio_bytes)
     segment_paths.append(arrival_path)
     
     # Process conversation
@@ -94,31 +80,24 @@ def generate_podcast_audio(script_path, output_dir="output/audio"):
         # Determine which voice to use
         if speaker == "Leo":
             voice_id = voice_ids["Leo"]
+        elif speaker == "Narrator":
+            voice_id = voice_ids["Narrator"]
         else:
             voice_id = voice_ids[script["historical_figure"]]
         
         print(f"Generating audio for {speaker}, line {i+1}...")
-        exchange_path = os.path.join(output_dir, f"conversation_{i+1}.mp3")
+        exchange_path = os.path.join(output_dir, f"segments/conversation_{i+1}.mp3")
         
-        # If this is not the first exchange, use previous exchange for continuity
-        previous_text = None
-        if i > 0:
-            previous_text = script["conversation"][i-1]["text"]
-        
-        # If this is not the last exchange, use next exchange for continuity
-        next_text = None
-        if i < len(script["conversation"]) - 1:
-            next_text = script["conversation"][i+1]["text"]
-        
-        exchange_audio = generate(
+        exchange_audio = client.text_to_speech.convert(
             text=text,
-            voice=voice_id,
-            model="eleven_multilingual_v2",
-            output_format="mp3_44100_128",
-            previous_text=previous_text,
-            next_text=next_text
+            voice_id=voice_id,
+            model_id="eleven_multilingual_v2",
+            output_format="mp3_44100_128"
         )
-        save(exchange_audio, exchange_path)
+        # Convert generator to bytes
+        exchange_audio_bytes = b"".join(list(exchange_audio))
+        with open(exchange_path, "wb") as f:
+            f.write(exchange_audio_bytes)
         segment_paths.append(exchange_path)
         
         # Avoid rate limiting
@@ -126,23 +105,30 @@ def generate_podcast_audio(script_path, output_dir="output/audio"):
     
     # Process outro
     print(f"Generating audio for outro...")
-    outro_path = os.path.join(output_dir, "outro.mp3")
-    outro_audio = generate(
+    outro_path = os.path.join(output_dir, "segments/outro.mp3")
+    outro_audio = client.text_to_speech.convert(
         text=script["outro"],
-        voice=voice_ids["Narrator"],
-        model="eleven_multilingual_v2",
+        voice_id=voice_ids["Narrator"],
+        model_id="eleven_multilingual_v2",
         output_format="mp3_44100_128"
     )
-    save(outro_audio, outro_path)
+    # Convert generator to bytes
+    outro_audio_bytes = b"".join(list(outro_audio))
+    with open(outro_path, "wb") as f:
+        f.write(outro_audio_bytes)
     segment_paths.append(outro_path)
     
     # Combine all audio segments
     print("Combining all audio segments...")
     combined = AudioSegment.empty()
     
+    # Add a short pause between segments (500ms silence)
+    pause = AudioSegment.silent(duration=1200)
+    
     for path in segment_paths:
         segment = AudioSegment.from_file(path)
         combined += segment
+        combined += pause  # Add pause after each segment
     
     # Save the combined audio
     character_name = script["historical_figure"].replace(" ", "_")
@@ -152,23 +138,30 @@ def generate_podcast_audio(script_path, output_dir="output/audio"):
     print(f"Podcast audio generated and saved to {combined_path}")
     return combined_path
 
-def process_script_to_audio(script_json_path):
+def process_script_to_audio(script_json_path, guest_voice_id):
     """
     Process a script JSON file to generate audio
     
     Args:
         script_json_path (str): Path to the script JSON file
+        guest_voice_id (str): Voice ID for the historical figure
         
     Returns:
         str: Path to the generated audio file
     """
-    # Extract character name from the file path
-    script_filename = Path(script_json_path).stem
+    # Load the script
+    with open(script_json_path, 'r', encoding='utf-8') as f:
+        script = json.load(f)
     
     # Create a specific output directory for this podcast
-    output_dir = f"output/audio/{script_filename}"
+    output_dir = f"output/{script['historical_figure'].replace(' ', '_')}/audio"
     
     # Generate the podcast audio
-    audio_path = generate_podcast_audio(script_json_path, output_dir)
+    audio_path = generate_podcast_audio(script, guest_voice_id, output_dir)
     
     return audio_path
+
+if __name__ == "__main__":
+    script_path = "/Users/saturninpugnet/PycharmProjects/perso/podcast-automation/output/podcast_script_Napoleon_Bonaparte.json"
+    guest_voice_id = "VR6AewLTigWG4xSOukaG"
+    process_script_to_audio(script_path, guest_voice_id)
