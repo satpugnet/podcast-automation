@@ -113,8 +113,7 @@ def generate_vtt_from_audio(episode_title, audio_path, script, output_file=None)
     )
 
     if output_file is None:
-        base_name = os.path.basename(audio_path).rsplit('.', 1)[0]
-        output_file = f"output/{episode_title.replace(' ', '_')}/transcripts/{base_name}_transcript.vtt"
+        output_file = f"output/{episode_title.replace(' ', '_')}/transcript.vtt"
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
