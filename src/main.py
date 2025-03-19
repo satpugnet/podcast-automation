@@ -1,8 +1,8 @@
-from creation_steps import voice_design
-from creation_steps import discussion_script
-from creation_steps import audio
-from creation_steps import publication
-from creation_steps import discussion_script
+from tools import voice_design
+from tools import discussion_script
+from tools import audio
+from tools import publication
+from tools import discussion_script
 import json
 
 script_path = None
