@@ -81,6 +81,23 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     - Narrator: An old, wise, warm and friendly grandpa figure with a calm authority and welcoming presence. His humor should be tailored to complement the historical figure being interviewed, with gentle wit and occasional playful references that would resonate with both the historical period and modern listeners. His eloquence is concise yet polished, intellectually accessible, and delivered with grandfatherly charm that makes complex historical contexts feel like familiar stories told around a fireplace.
     - Historical Figure: Should speak authentically to their character and time period, with all their complexities, flaws, and contradictions intact. Do NOT present an idealized version of the historical figure. Instead, portray them as closely as possible to their actual personality, including their biases, shortcomings, and controversial aspects. Their responses should be substantive and detailed, offering rich insights into their life, work, and era, while remaining true to their known character traits, beliefs, and attitudes. They should express views consistent with their time period and personal philosophy, even when these might be uncomfortable or controversial by modern standards. Their responses should be thorough and thoughtful, demonstrating their perspective without sanitizing or modernizing their worldview.
 
+    Sound Effects (SFX):
+    - Use sound effects and music strategically to enhance immersion without overwhelming the dialogue.
+    - Each sound effect or music description must be completely self-contained and highly detailed, as it will be used as the sole input for an AI sound generation system.
+    - Sound effect descriptions should paint a complete audio picture in 10-15 words, including specific sounds, their qualities, volume levels, progression, and any emotional tone.
+    - For example, instead of "forest sounds," write "dense forest with rustling leaves starting softly then growing louder, distant bird calls fading in and out, and gentle wind through branches."
+    - Instead of "battle sounds," write "clashing metal swords beginning quietly then intensifying, men shouting growing from whispers to screams, horses galloping on muddy ground approaching then passing by."
+    - Music can also be included as SFX, such as "melancholic violin melody with soft piano accompaniment starting gently and swelling to moderate volume" or "triumphant brass fanfare with military drums beginning boldly then gradually fading."
+    - Use sound effects primarily for:
+       * Major scene transitions
+       * Establishing new environments
+       * Highlighting emotionally significant moments
+       * Underscoring particularly important historical contexts
+       * Setting mood through appropriate period music
+       * etc...
+    - Avoid generic or vague descriptions that would be difficult to generate accurately.
+    - Always include an indication of the sound's duration (in seconds) and volume progression (starting soft/loud and how it changes) to guide the AI sound generation system.
+
     IMPORTANT: Format your response strictly as a JSON object with the following structure, ONLY THE JSON, NO markdown or syntax highlighting:
     {
         "title": "Episode title", // Just put the name of the historical figure
@@ -88,15 +105,26 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
         "historical_figure": "Name of the historical figure",
         "time_period": "Time period of the conversation",
         "location": "Location of the conversation",
-        "intro": "Full intro text",
-        "arrival_scene": "Full arrival scene text",
-        "conversation": [
-            {"speaker": "Leo", "text": "..."},
-            {"speaker": "Historical Figure", "text": "..."},
-            {"speaker": "Narrator", "text": "..."}, // Occasional narrator interjections
-            ...
+        "intro": [ // Usually only the Narrator/SFX speaks in the intro
+            {"speaker": "SFX", "text": "...", "duration": x},
+            {"speaker": "Narrator", "text": "..."}, 
+            {"speaker": "SFX", "text": "...", "duration": x}
         ],
-        "outro": "Full outro text"
+        "arrival_scene": [ // Usually only the Narrator/SFX speaks in the arrival scene
+            {"speaker": "Narrator", "text": "..."}, 
+            {"speaker": "SFX", "text": "...", "duration": x},
+        ],
+        "conversation": [
+            {"speaker": "Leo", "text": "..."}, 
+            {"speaker": "Historical Figure", "text": "..."}, // "Historical Figure" should be replaced by the name of the historical figure
+            {"speaker": "Narrator", "text": "..."}, 
+            {"speaker": "SFX", "text": "...", "duration": x}
+        ],
+        "outro": [ // Usually only the Narrator/SFX speaks in the outro
+            {"speaker": "Leo", "text": "..."}, 
+            {"speaker": "Narrator", "text": "..."}, 
+            {"speaker": "SFX", "text": "...", "duration": x}
+        ]
     }
     """
 

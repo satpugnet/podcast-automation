@@ -1,3 +1,17 @@
-I’ve been quietly experimenting with AI-generated podcasts to learn more about historical figures (first one was Napoleon). Found them pretty enjoyable, so thought I’d share them publicly.
+I have had an idea brewing for a while, and finally found some time to bring it to life—or, as we say in tech bro, to vibe code it. I am passionate about science and history, and I have long thought the most engaging way to learn history would be through conversations with historical figures themselves. Now that technology has caught up, it felt like the right time to make it happen.
 
-Would love to hear your thoughts—and who Leo, my young time traveler, should meet next.
+I built a system that generates podcast episodes featuring immersive and in-depth discussions between a curious young time traveler and some of history's most notable figures. I built the technology to automatically conduct in-depth research about each historical figure prior to creating the episodes, ensuring that factual data is used to produce accurate, engaging, and educational conversation.
+
+Initially, I created these podcasts just for myself and started sharing them with family. But they have turned out pretty enjoyable, so I decided to share them with the world.
+
+The first episode features Napoleon—because, being proudly French, I simply could not resist starting there.
+
+You can check it out here. Let me know what you think of it (and feel free to suggest who Leo, our time traveling host, should meet next!)
+
+Listen here:
+
+Spotify → https://open.spotify.com/show/231U3YwpSmjSUxp7RyjJ22
+Apple → https://podcasts.apple.com/us/podcast/echoes-through-time/id1802973211
+Amazon → https://music.amazon.com/podcasts/ab992751-51d6-4029-b3b1-924f696344d5
+Podcast Addict → https://podcastaddict.com/podcast/echoes-through-time/5759012
+

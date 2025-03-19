@@ -3,15 +3,45 @@ import json
 import time
 from pathlib import Path
 from pydub import AudioSegment
-from elevenlabs import ElevenLabs
+from elevenlabs.client import ElevenLabs
 from dotenv import load_dotenv
+
+def generate_sound_effect(text: str, duration_seconds: float, output_path: str):
+    """
+    Generate sound effects using ElevenLabs API
+    
+    Args:
+        text (str): Description of the sound effect
+        output_path (str): Path to save the sound effect
+        client (ElevenLabs, optional): ElevenLabs client instance
+    """
+    client = ElevenLabs(api_key=os.getenv("ELEVEN_LABS_API_KEY"))
+    
+    print(f"Generating sound effect: {text}...")
+    
+    result = client.text_to_sound_effects.convert(
+        text=text,
+        duration_seconds=duration_seconds,  # Optional
+        prompt_influence=0.3,
+    )
+    
+    # Create directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, "wb") as f:
+        for chunk in result:
+            f.write(chunk)
+    
+    print(f"Sound effect saved to {output_path}")
+    return output_path
 
 def generate_podcast_audio(script, guest_voice_id, output_dir):
     """
     Generate audio for a podcast script using ElevenLabs API
     
     Args:
-        script_path (str): Path to the JSON script file
+        script (dict): The podcast script dictionary
+        guest_voice_id (str): Voice ID for the historical figure
         output_dir (str): Directory to save the audio files
     
     Returns:
@@ -31,6 +61,7 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(os.path.join(output_dir, "segments"), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "sfx"), exist_ok=True)
     
     # Define voice IDs for each speaker
     voice_ids = {
@@ -38,97 +69,74 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
         "Leo": "v2YwWtvprj8WUvzb7D4K", 
         script["historical_figure"]: guest_voice_id
     }
+    
     # Generate audio segments
-    audio_segments = []
     segment_paths = []
+    sfx_durations = {}  # Store SFX durations for fade calculations
     
-    # Process intro
-    print(f"Generating audio for intro...")
-    intro_path = os.path.join(output_dir, "segments/intro.mp3")
-    intro_audio = client.text_to_speech.convert(
-        text=script["intro"],
-        voice_id=voice_ids["Narrator"],
-        model_id="eleven_multilingual_v2",
-        output_format="mp3_44100_128"
-    )
-    # Convert generator to bytes
-    intro_audio_bytes = b"".join(list(intro_audio))
-    with open(intro_path, "wb") as f:
-        f.write(intro_audio_bytes)
-    segment_paths.append(intro_path)
+    # Process each section of the script
+    sections = ["intro", "arrival_scene", "conversation", "outro"]
     
-    # Process arrival scene
-    print(f"Generating audio for arrival scene...")
-    arrival_path = os.path.join(output_dir, "segments/arrival_scene.mp3")
-    arrival_audio = client.text_to_speech.convert(
-        text=script["arrival_scene"],
-        voice_id=voice_ids["Narrator"],
-        model_id="eleven_multilingual_v2",
-        output_format="mp3_44100_128"
-    )
-    # Convert generator to bytes
-    arrival_audio_bytes = b"".join(list(arrival_audio))
-    with open(arrival_path, "wb") as f:
-        f.write(arrival_audio_bytes)
-    segment_paths.append(arrival_path)
-    
-    # Process conversation
-    for i, exchange in enumerate(script["conversation"]):
-        speaker = exchange["speaker"]
-        text = exchange["text"]
-        
-        # Determine which voice to use
-        if speaker == "Leo":
-            voice_id = voice_ids["Leo"]
-        elif speaker == "Narrator":
-            voice_id = voice_ids["Narrator"]
-        else:
-            voice_id = voice_ids[script["historical_figure"]]
-        
-        print(f"Generating audio for {speaker}, line {i+1}...")
-        exchange_path = os.path.join(output_dir, f"segments/conversation_{i+1}.mp3")
-        
-        exchange_audio = client.text_to_speech.convert(
-            text=text,
-            voice_id=voice_id,
-            model_id="eleven_multilingual_v2",
-            output_format="mp3_44100_128"
-        )
-        # Convert generator to bytes
-        exchange_audio_bytes = b"".join(list(exchange_audio))
-        with open(exchange_path, "wb") as f:
-            f.write(exchange_audio_bytes)
-        segment_paths.append(exchange_path)
-        
-        # Avoid rate limiting
-        time.sleep(0.5)
-    
-    # Process outro
-    print(f"Generating audio for outro...")
-    outro_path = os.path.join(output_dir, "segments/outro.mp3")
-    outro_audio = client.text_to_speech.convert(
-        text=script["outro"],
-        voice_id=voice_ids["Narrator"],
-        model_id="eleven_multilingual_v2",
-        output_format="mp3_44100_128"
-    )
-    # Convert generator to bytes
-    outro_audio_bytes = b"".join(list(outro_audio))
-    with open(outro_path, "wb") as f:
-        f.write(outro_audio_bytes)
-    segment_paths.append(outro_path)
+    for section in sections:
+        print(f"Generating audio for {section}...")
+        for i, item in enumerate(script[section]):
+            if item["speaker"] == "SFX":
+                # Generate sound effect
+                sfx_path = os.path.join(output_dir, f"sfx/{section}_sfx_{i}.mp3")
+                duration = float(item.get("duration", 5.0))  # Default to 5 seconds if not specified
+                generate_sound_effect(item["text"], duration, sfx_path)
+                segment_paths.append(sfx_path)
+                sfx_durations[sfx_path] = duration  # Store the duration for later use
+            else:
+                # Generate speech
+                voice_id = voice_ids.get(item["speaker"], voice_ids["Narrator"])
+                speech_path = os.path.join(output_dir, f"segments/{section}_{i}.mp3")
+                
+                speech_audio = client.text_to_speech.convert(
+                    text=item["text"],
+                    voice_id=voice_id,
+                    model_id="eleven_multilingual_v2",
+                    output_format="mp3_44100_128"
+                )
+                
+                # Convert generator to bytes
+                speech_audio_bytes = b"".join(list(speech_audio))
+                with open(speech_path, "wb") as f:
+                    f.write(speech_audio_bytes)
+                segment_paths.append(speech_path)
+            
+            # Avoid rate limiting for conversation section
+            if section == "conversation":
+                time.sleep(0.5)
     
     # Combine all audio segments
     print("Combining all audio segments...")
     combined = AudioSegment.empty()
     
-    # Add a short pause between segments (500ms silence)
+    # Add a short pause between segments (1500ms silence)
     pause = AudioSegment.silent(duration=1200)
     
-    for path in segment_paths:
+    for i, path in enumerate(segment_paths):
         segment = AudioSegment.from_file(path)
+        
+        # Apply fade in/out effects
+        if "sfx" in path:
+            # Calculate fade durations based on the SFX duration
+            duration = sfx_durations.get(path)
+            # Use 20% of the duration for fade in and 25% for fade out, with minimums
+            # Calculate fade durations based on the SFX duration, with minimums and maximums
+            fade_in_duration = max(min(int(duration * 1000 * 0.2), 3000), 500)  # At least 500ms, at most 3s
+            fade_out_duration = max(min(int(duration * 1000 * 0.25), 4000), 750)  # At least 750ms, at most 4s
+            segment = segment.fade_in(fade_in_duration).fade_out(fade_out_duration)
+        else:
+            # Apply subtle fades for speech to sound more natural
+            segment = segment.fade_in(300).fade_out(500)
+        
         combined += segment
-        combined += pause  # Add pause after each segment
+        
+        # Add pause after each segment except the last one
+        if i < len(segment_paths) - 1:
+            combined += pause
     
     # Save the combined audio
     character_name = script["historical_figure"].replace(" ", "_")
