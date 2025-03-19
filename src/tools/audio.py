@@ -66,7 +66,7 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     # Define voice IDs for each speaker
     voice_ids = {
         "Narrator": "NOpBlnGInO9m6vDvFkFC",  # Adam voice for intro and outro
-        "Leo": "v2YwWtvprj8WUvzb7D4K", 
+        "Leo": "UgBBYS2sOqTuMpoF3BR0",   # Used to be v2YwWtvprj8WUvzb7D4K (Adam)
         script["historical_figure"]: guest_voice_id
     }
     
