@@ -28,15 +28,19 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     system_prompt = """
     Create a richly detailed, engaging, and immersive podcast script (~20 minutes) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
 
+    This is a pedagogical educational podcast designed for a general audience. The content should be accessible, engaging, and informative for listeners of various backgrounds and knowledge levels.
+
     Detailed Structure:
 
     1. Intro (1 min):
        - Begin with an intriguing narrative hook or fascinating anecdote that captures listeners' curiosity immediately.
        - Briefly introduce the historical figure, emphasizing why their story resonates today.
+       - Clearly establish the time period and location for the listener's orientation.
 
     2. Arrival Scene (1-2 mins):
        - Set a vivid, immersive scene rich in sensory detail (visuals, sounds, atmosphere) that transports listeners directly into the historical context.
        - Depict Leo's gentle and believable arrival into the setting, smoothly transitioning into the first interaction without abruptness.
+       - Explicitly mention the specific location, date, and relevant historical context to ground the audience.
 
     3. Conversation (15-18 mins):
        - Open the dialogue casually, establishing rapport gently and naturally before gradually deepening the discussion.
@@ -44,6 +48,7 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
        - Gradually progress into key life events, personal anecdotes, emotional challenges, notable achievements, and formative experiences of the historical figure.
        - Encourage genuine, spontaneous exchanges and organic emotional depth, allowing for introspection, humor, and meaningful reflection.
        - Integrate historical context naturally within dialogue, enhancing listener understanding without interrupting conversational flow.
+       - Have characters occasionally reference the specific time period, location, or historical events to help orient the audience throughout the conversation.
        - Maintain dynamic exchanges, alternating seamlessly between curiosity-driven inquiries from Leo and detailed storytelling by the historical figure.
        - Occasionally, the Narrator may briefly interject to provide context, transitions, or to highlight significant moments. These should be rare and purposeful.
        - The setting can occasionally change as characters move through space or time naturally and meaningfully.
@@ -68,6 +73,13 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
           * Give the historical figure space for occasional extended monologues (1-3 minutes) to deeply reflect or passionately explain important topics.
           * Ensure Leo's questions range from short, spontaneous reactions to more thoughtful inquiries.
           * Maintain a conversational rhythm that ebbs and flows naturally.
+       - IMPORTANT: Model the conversation after professional interview podcasts where the host (Leo) guides the guest (historical figure) into sharing expansively about themselves and their world. Leo should:
+          * Ask open-ended questions that invite detailed responses
+          * Follow up on interesting points to draw out more information
+          * Provide gentle prompts that encourage the historical figure to elaborate
+          * Create a safe space for the historical figure to share personal insights and reflections
+          * Use active listening techniques to show engagement and encourage deeper sharing
+          * Occasionally summarize or reflect on what's been shared before moving to a new topic
        - IMPORTANT: Explicitly ensure that most of the historical figure's responses are expansive, detailed, and richly informative. Avoid consistently short or superficial answers; instead, actively encourage the historical figure to delve deeply into their thoughts, motivations, and experiences.
 
     4. Outro (1 min):
@@ -77,7 +89,7 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     Tone: Warm, conversational, intellectually engaging, empathetic, subtly humorous, reflective, approachable, and authentic.
 
     Characterization:
-    - Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity often leading to humorous moments. His earnestness and occasional out-of-place modern references should create natural comedy that lightens the conversation.
+    - Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity often leading to humorous moments. His earnestness and occasional out-of-place modern references should create natural comedy that lightens the conversation. As a time traveler from the modern era, Leo should occasionally make anachronistic references or comparisons (like mentioning smartphones, social media, modern pop culture, etc.) that would be completely unknown to the historical figure, creating humorous moments of confusion or opportunities for Leo to explain modern concepts.
     - Narrator: An old, wise, warm and friendly grandpa figure with a calm authority and welcoming presence. His humor should be tailored to complement the historical figure being interviewed, with gentle wit and occasional playful references that would resonate with both the historical period and modern listeners. His eloquence is concise yet polished, intellectually accessible, and delivered with grandfatherly charm that makes complex historical contexts feel like familiar stories told around a fireplace.
     - Historical Figure: Should speak authentically to their character and time period, with all their complexities, flaws, and contradictions intact. Do NOT present an idealized version of the historical figure. Instead, portray them as closely as possible to their actual personality, including their biases, shortcomings, and controversial aspects. Their responses should be substantive and detailed, offering rich insights into their life, work, and era, while remaining true to their known character traits, beliefs, and attitudes. They should express views consistent with their time period and personal philosophy, even when these might be uncomfortable or controversial by modern standards. Their responses should be thorough and thoughtful, demonstrating their perspective without sanitizing or modernizing their worldview.
 
@@ -98,6 +110,8 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     - Avoid generic or vague descriptions that would be difficult to generate accurately.
     - Always include an indication of the sound's duration (in seconds) and volume progression (starting soft/loud and how it changes) to guide the AI sound generation system.
 
+    Note: You can include <break time="x.xs" /> tags in the text to specify pauses in character speech (e.g., "I never expected that. <break time="1.5s" /> How fascinating.").
+
     IMPORTANT: Format your response strictly as a JSON object with the following structure, ONLY THE JSON, NO markdown or syntax highlighting:
     {
         "title": "Episode title", // Just put the name of the historical figure
@@ -106,7 +120,6 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
         "time_period": "Time period of the conversation",
         "location": "Location of the conversation",
         "intro": [ // Usually only the Narrator/SFX speaks in the intro
-            {"speaker": "SFX", "text": "...", "duration": x},
             {"speaker": "Narrator", "text": "..."}, 
             {"speaker": "SFX", "text": "...", "duration": x}
         ],
@@ -120,7 +133,7 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
             {"speaker": "Narrator", "text": "..."}, 
             {"speaker": "SFX", "text": "...", "duration": x}
         ],
-        "outro": [ // Usually only the Narrator/SFX speaks in the outro
+        "outro": [
             {"speaker": "Leo", "text": "..."}, 
             {"speaker": "Narrator", "text": "..."}, 
             {"speaker": "SFX", "text": "...", "duration": x}
@@ -131,7 +144,7 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     # Construct the user prompt
     user_prompt = f"Create a podcast script for the Time Traveler Podcast interviewing {historical_figure}."
     if additional_knowledge:
-        user_prompt += f"\n\nHere is additional research and factual information about {historical_figure} and their era that should be used to enrich the script to ensure historical accuracy and educational value:\n\n{additional_knowledge}"
+        user_prompt += f"\n\nHere is additional research and factual information about {historical_figure} and their era which has been researched prior to the script being generated that can be used to enrich the script to ensure historical accuracy and educational value:\n\n{additional_knowledge}"
     
     # Initialize messages list for the conversation with the AI
     messages = [
@@ -166,6 +179,10 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
         iteration = 1
         character_name = script.get("historical_figure", "Unknown")
         save_script_iteration(script, character_name, iteration)
+        
+        # Estimate script length
+        estimated_length = estimate_script_length(script)
+        print(f"\nEstimated script length: {estimated_length:.1f} minutes")
         
         # Feedback loop
         while True:
@@ -215,6 +232,10 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
             # Save this iteration
             iteration += 1
             save_script_iteration(script, character_name, iteration)
+            
+            # Estimate script length
+            estimated_length = estimate_script_length(script)
+            print(f"\nEstimated script length: {estimated_length:.1f} minutes")
         
         # Save the final script and return the path
         output_file = save_script_to_file(script)
@@ -223,6 +244,37 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
     except Exception as e:
         print(f"Error generating podcast script: {e}")
         raise
+
+def estimate_script_length(script):
+    """
+    Estimate the length of a podcast script in minutes based on word count
+    
+    Args:
+        script (dict): The podcast script to estimate
+    
+    Returns:
+        float: Estimated length in minutes
+    """
+    # Average speaking rate (words per minute)
+    WORDS_PER_MINUTE = 150
+    
+    # Count words in all sections except SFX
+    total_words = 0
+    sfx_time = 0
+    
+    # Process all script sections
+    for section in ['intro', 'arrival_scene', 'conversation', 'outro']:
+        for item in script.get(section, []):
+            if item.get('speaker') == 'SFX':
+                sfx_time += item.get('duration', 0)
+            else:
+                total_words += len(item.get('text', '').split())
+    
+    # Calculate total time (speech + SFX)
+    speech_time_minutes = total_words / WORDS_PER_MINUTE
+    sfx_time_minutes = sfx_time / 60
+    
+    return speech_time_minutes + sfx_time_minutes
 
 def save_script_iteration(script, character_name, iteration):
     """
@@ -237,7 +289,7 @@ def save_script_iteration(script, character_name, iteration):
     os.makedirs(f"output/{character_name.replace(' ', '_')}/script_iterations", exist_ok=True)
     
     # Create filename with character name and iteration number
-    output_file = f"output/{character_name.replace(' ', '_')}/script_iterations/podcast_script_iteration_{iteration}.json"
+    output_file = f"output/{character_name.replace(' ', '_')}/script_iterations/script_iteration_{iteration}.json"
     
     # Write the script to the file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -260,7 +312,7 @@ def save_script_to_file(script, output_file=None):
     
     # Create default output filename with character name if not provided
     if output_file is None:
-        output_file = f"output/{character_name.replace(' ', '_')}/podcast_script.json"
+        output_file = f"output/{character_name.replace(' ', '_')}/script.json"
     
     # Create output directory if it doesn't exist
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -278,13 +330,22 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         historical_figure = sys.argv[1]
         additional_knowledge = None
+        existing_script_path = None
         
         # Check if additional knowledge file is provided
         if len(sys.argv) > 2:
             with open(sys.argv[2], 'r', encoding='utf-8') as file:
                 additional_knowledge = file.read()
         
-        script_path = generate_podcast_script(historical_figure=historical_figure, additional_knowledge=additional_knowledge)
+        # Check if existing script path is provided
+        if len(sys.argv) > 3:
+            existing_script_path = sys.argv[3]
+        
+        script_path = generate_podcast_script(
+            historical_figure=historical_figure, 
+            additional_knowledge=additional_knowledge,
+            script_path=existing_script_path
+        )
         print(f"Generated script saved to: {script_path}")
     else:
-        print("Usage: python discussion_script.py <historical_figure> [additional_knowledge_file]")
+        print("Usage: python discussion_script.py <historical_figure> [additional_knowledge_file] [existing_script_path]")

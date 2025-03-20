@@ -3,14 +3,23 @@ from tools import discussion_script
 from tools import audio
 from tools import publication
 from tools import discussion_script
+from tools import transcript
 import json
 
 script_path = None
 guest_voice_id = None
 audio_path = None
 
+# =============================================
+# ========= STEP 1: CHARACTER SELECTION ======
+# =============================================
+
 # Ask user for the character name
 character_name = input("Enter the name of the historical character 🧠: ")
+
+# =============================================
+# ========= STEP 2: VOICE GENERATION =========
+# =============================================
 
 generate_voice = input("Generate character voice? (yes/no) 🎙️: ")
 
@@ -21,6 +30,9 @@ else:
     # Call the generate_voice function only if user confirms by typing the character name
     guest_voice_id = voice_design.generate_voice(character_name=character_name)
 
+# =============================================
+# ========= STEP 3: SCRIPT GENERATION ========
+# =============================================
 
 # Ask user if they want to generate a podcast script
 generate_script = input("Generate podcast script? (yes/no) 📝: ").lower().strip()
@@ -43,6 +55,10 @@ if generate_script in ["yes", "y"]:
 else:
     print("Podcast script generation skipped. ⏭️")
 
+# =============================================
+# ========= STEP 4: AUDIO GENERATION =========
+# =============================================
+
 # Ask user if they want to generate audio
 generate_audio = input("Generate podcast audio? (yes/no) 🔊: ").lower().strip()
 
@@ -59,12 +75,41 @@ if generate_audio in ["yes", "y"]:
 else:
     print("Podcast audio generation skipped. ⏭️")
 
-# Ask user if they want to publish the podcast
-publish_podcast = input("Publish podcast to Transistor.fm? (yes/no) 🚀: ").lower().strip()
+# =============================================
+# ======= STEP 5: TRANSCRIPT GENERATION ======
+# =============================================
 
-if publish_podcast in ["yes", "y"]:
+generate_transcript = input("Generate podcast transcript? (yes/no) 📝: ").lower().strip()
+
+if generate_transcript in ["yes", "y"]:
     if not audio_path:
         audio_path = input("No audio file found. Please enter the path to the audio file 🔍: ")
+    
+    if not script_path:
+        script_path = input("No script file found. Please enter the path to the script file 📄: ")
+    
+    with open(script_path, 'r', encoding='utf-8') as file:
+        script_data = json.load(file)
+    
+    print(f"Generating transcript for {script_data['title']}... 📝")
+    transcript_path = transcript.generate_vtt_from_audio(script_data, audio_path)
+    print(f"Transcript generated successfully at {transcript_path} ✅")
+else:
+    print("Transcript generation skipped. ⏭️")
+
+# =============================================
+# ======= STEP 6: EPISODE PUBLICATION ========
+# =============================================
+
+# Ask user if they want to publish the episode
+publish_episode = input("Publish episode to Transistor.fm? (yes/no) 🚀: ").lower().strip()
+
+if publish_episode in ["yes", "y"]:
+    if not audio_path:
+        audio_path = input("No audio file found. Please enter the path to the audio file 🔍: ")
+    
+    if not transcript_path:
+        transcript_path = input("No transcript file found. Please enter the path to the transcript file 📄: ")
     
     # Load the script JSON to use for the description
     if not script_path:
@@ -73,23 +118,19 @@ if publish_podcast in ["yes", "y"]:
     with open(script_path, 'r', encoding='utf-8') as file:
         script_data = json.load(file)
     
-    # Use the title and description from the script if available, otherwise create one
-    description = script_data["description"]
-    title = script_data["title"]
-    
-    image_path = input("Enter the path to the episode image, note that it does not work yet and needs to be implemented (optional, press Enter to skip) 🖼️: ").strip()
+    image_path = input("Enter the path to the episode image, note that it does not work yet and needs to be implemented (optional, press Enter to skip) 🖼️: ")
     image_path = image_path if image_path else None
     
     publish_now = input("Publish episode immediately? (yes/no) ⏱️: ").lower().strip() in ["yes", "y"]
     
-    print(f"Publishing podcast episode '{title}'... 📡")
+    print(f"Publishing episode '{script_data['title']}'... 📡")
     episode = publication.publish_episode(
-        title=title,
+        script_path=script_path,
         audio_path=audio_path,
-        description=description,
+        transcript_path=transcript_path,
         image_path=image_path,
         publish_now=publish_now
     )
-    print(f"Podcast episode '{title}' published successfully! 🎉")
+    print(f"Episode '{script_data['title']}' published successfully! 🎉")
 else:
-    print("Podcast publication skipped. ⏭️")
+    print("Episode publication skipped. ⏭️")

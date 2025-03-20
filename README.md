@@ -80,11 +80,12 @@ Voice Qualities:
 
 ### **Prompt for In-Depth Research and Concise Summary of Historical Figure**
 
-Conduct extensive and detailed research on the historical figure provided and its era for an history Podcast. Gather information from reliable historical resources, biographies, academic publications, and reputable articles. Focus your research on uncovering fascinating, lesser-known details, key life events, significant achievements, controversies, personal anecdotes, modern relevance, pivotal struggles, character traits, and the broader historical impact of this person. When possible, provide quantitative information and dates.
+Conduct extensive and detailed research on the historical figure provided and its era for an history Podcast. Gather information from reliable historical resources, biographies, academic publications, and reputable articles. Focus your research on uncovering fascinating, lesser-known details, key life events, significant achievements, controversies, personal anecdotes, modern relevance, pivotal struggles, character traits, and the broader historical impact of this person. Try to have a particular focus on specific data that an LLM might not know directly rather than well known facts, when possible provide quantitative information and dates.
 
 After thorough research, generate a comprehensive summary of the most compelling and podcast-friendly facts about the historical figure. Consider including elements such as:
 - Brief biography and life timeline
-- Personality traits and distinctive speech patterns
+- Personality traits
+- Distinctive speech patterns
 - Fascinating personal anecdotes and quirks
 - Significant achievements, innovations, and contributions
 - Major challenges and struggles they faced

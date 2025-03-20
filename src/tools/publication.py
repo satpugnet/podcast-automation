@@ -26,7 +26,7 @@ def upload_audio(upload_url, filepath):
         response.raise_for_status()
         print("Audio file uploaded successfully.")
 
-def create_episode(title, audio_url, description, transcript_text, image_url=None):
+def create_episode(title, audio_url, description, transcript_text, image_url=None, keywords=None):
     print(f"Creating episode: '{title}'")
     url = "https://api.transistor.fm/v1/episodes"
     episode_data = {
@@ -35,7 +35,8 @@ def create_episode(title, audio_url, description, transcript_text, image_url=Non
             "title": title,
             "audio_url": audio_url,
             "description": description,
-            "transcript_text": transcript_text
+            "transcript_text": transcript_text,
+            "keywords": keywords
         }
     }
     
@@ -79,8 +80,12 @@ def publish_episode_status(episode_id, status="published"):
     return response.json()
 
 # Main flow
-def publish_episode(title, audio_path, description, transcript_path, image_path=None, publish_now=False):
-    print(f"Beginning publication process for episode: '{title}'")
+def publish_episode(script_path, audio_path, transcript_path=None, image_path=None, publish_now=False):
+    # Load the script to extract title and description
+    with open(script_path, 'r', encoding='utf-8') as file:
+        script = json.load(file)
+    
+    print(f"Beginning publication process for episode: '{script['title']}'")
     filename = os.path.basename(audio_path)
     authorization = authorize_upload(filename)
 
@@ -102,9 +107,9 @@ def publish_episode(title, audio_path, description, transcript_path, image_path=
 
     print("Creating episode in Transistor.fm...")
     episode = create_episode(
-        title=title,
+        title=script["title"],
         audio_url=audio_url,
-        description=description,
+        description=script["description"],
         transcript_text=transcript_text,
         image_url=image_url
     )
@@ -126,20 +131,22 @@ if __name__ == "__main__":
     
     print("Running publication module directly")
     
-    if len(sys.argv) < 5:
-        print("Usage: python publication.py <title> <audio_path> <transcript_path> <description> [publish_now]")
+    if len(sys.argv) < 3:
+        print("Usage: python publication.py <script_path> <audio_path> <transcript_path> [image_path] [publish_now]")
         sys.exit(1)
     
-    title = sys.argv[1]
+    script_path = sys.argv[1]
     audio_path = sys.argv[2]
     transcript_path = sys.argv[3]
-    description = sys.argv[4]
+    image_path = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != "None" else None
     publish_now = True if len(sys.argv) > 5 and sys.argv[5].lower() in ["true", "yes", "y", "1"] else False
     
-    publish_episode(
-        title=title,
+    result = publish_episode(
+        script_path=script_path,
         audio_path=audio_path,
         transcript_path=transcript_path,
-        description=description,
+        image_path=image_path,
         publish_now=publish_now
     )
+    
+    print(f"Publication process completed. Result: {json.dumps(result, indent=2)}")

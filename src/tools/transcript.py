@@ -94,7 +94,7 @@ def identify_speakers(script, transcript_text):
         # Return empty mapping if parsing fails
         return {}
 
-def generate_vtt_from_audio(episode_title, audio_path, script, output_file=None):
+def generate_vtt_from_audio(script, audio_path, output_file=None):
     load_dotenv()
     client = ElevenLabs(api_key=os.getenv("ELEVEN_LABS_API_KEY"))
 
@@ -113,7 +113,7 @@ def generate_vtt_from_audio(episode_title, audio_path, script, output_file=None)
     )
 
     if output_file is None:
-        output_file = f"output/{episode_title.replace(' ', '_')}/transcript.vtt"
+        output_file = f"output/{script['title'].replace(' ', '_')}/transcript.vtt"
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
@@ -182,14 +182,14 @@ def generate_vtt_from_audio(episode_title, audio_path, script, output_file=None)
 if __name__ == "__main__":
     import sys
     if len(sys.argv) > 2:
-        episode_title = sys.argv[1]
+        script_path = sys.argv[1]
         audio_path = sys.argv[2]
-        script_path = sys.argv[3]
-        output_file = sys.argv[4] if len(sys.argv) > 4 else None
+        output_file = sys.argv[3] if len(sys.argv) > 3 else None
         
         with open(script_path, 'r', encoding='utf-8') as f:
-            script = json.load(f)
+            script_data = json.load(f)
                 
-        generate_vtt_from_audio(episode_title, audio_path, script, output_file)
+        output_file = generate_vtt_from_audio(script_data, audio_path, output_file)
+        print(f"Generated transcript saved to: {output_file}")
     else:
-        print("Usage: python generate_vtt.py <episode_title> <audio_path> <script_path> [output_file]")
+        print("Usage: python transcript.py <script_path> <audio_path> [output_file]")

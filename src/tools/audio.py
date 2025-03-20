@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import hashlib
 from pathlib import Path
 from pydub import AudioSegment
 from elevenlabs.client import ElevenLabs
@@ -59,14 +60,14 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     client = ElevenLabs(api_key=api_key)
     
     # Create output directory if it doesn't exist
-    os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(os.path.join(output_dir, "segments"), exist_ok=True)
-    os.makedirs(os.path.join(output_dir, "sfx"), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "audio"), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "audio/segments"), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "audio/sfx"), exist_ok=True)
     
     # Define voice IDs for each speaker
     voice_ids = {
         "Narrator": "NOpBlnGInO9m6vDvFkFC",  # Adam voice for intro and outro
-        "Leo": "UgBBYS2sOqTuMpoF3BR0",   # Used to be v2YwWtvprj8WUvzb7D4K (Adam)
+        "Leo": "v2YwWtvprj8WUvzb7D4K",   # Used to be UgBBYS2sOqTuMpoF3BR0 (Mark)
         script["historical_figure"]: guest_voice_id
     }
     
@@ -82,32 +83,49 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
         for i, item in enumerate(script[section]):
             if item["speaker"] == "SFX":
                 # Generate sound effect
-                sfx_path = os.path.join(output_dir, f"sfx/{section}_sfx_{i}.mp3")
-                duration = float(item.get("duration", 5.0))  # Default to 5 seconds if not specified
-                generate_sound_effect(item["text"], duration, sfx_path)
+                text_hash = hashlib.md5(f"sfx-{item['text']}".encode()).hexdigest()[:8]
+                sfx_path = os.path.join(output_dir, f"audio/sfx/{section}_sfx_{i}_{text_hash}.mp3")
+                
+                # Check if file already exists
+                if os.path.exists(sfx_path):
+                    print(f"Using existing sound effect: {sfx_path}")
+                else:
+                    duration = float(item.get("duration", 5.0))  # Default to 5 seconds if not specified
+                    generate_sound_effect(item["text"], duration, sfx_path)
+                    
+                    # Avoid rate limiting only if we generated a new sound effect
+                    time.sleep(0.5)
+                
                 segment_paths.append(sfx_path)
-                sfx_durations[sfx_path] = duration  # Store the duration for later use
+                sfx_durations[sfx_path] = float(item.get("duration", 5.0))  # Store the duration for later use
             else:
                 # Generate speech
                 voice_id = voice_ids.get(item["speaker"], voice_ids["Narrator"])
-                speech_path = os.path.join(output_dir, f"segments/{section}_{i}.mp3")
                 
-                speech_audio = client.text_to_speech.convert(
-                    text=item["text"],
-                    voice_id=voice_id,
-                    model_id="eleven_multilingual_v2",
-                    output_format="mp3_44100_128"
-                )
+                # Create hash from voice_id and text
+                content_hash = hashlib.md5(f"{voice_id}-{item['text']}".encode()).hexdigest()[:8]
+                speech_path = os.path.join(output_dir, f"audio/segments/{section}_{i}_{content_hash}.mp3")
                 
-                # Convert generator to bytes
-                speech_audio_bytes = b"".join(list(speech_audio))
-                with open(speech_path, "wb") as f:
-                    f.write(speech_audio_bytes)
+                # Check if file already exists
+                if os.path.exists(speech_path):
+                    print(f"Using existing speech segment: {speech_path}")
+                else:
+                    speech_audio = client.text_to_speech.convert(
+                        text=item["text"],
+                        voice_id=voice_id,
+                        model_id="eleven_multilingual_v2",
+                        output_format="mp3_44100_128"
+                    )
+                    
+                    # Convert generator to bytes
+                    speech_audio_bytes = b"".join(list(speech_audio))
+                    with open(speech_path, "wb") as f:
+                        f.write(speech_audio_bytes)
+                    
+                    # Avoid rate limiting only if we generated a new speech segment
+                    time.sleep(0.5)
+                
                 segment_paths.append(speech_path)
-            
-            # Avoid rate limiting for conversation section
-            if section == "conversation":
-                time.sleep(0.5)
     
     # Combine all audio segments
     print("Combining all audio segments...")
@@ -139,8 +157,7 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
             combined += pause
     
     # Save the combined audio
-    character_name = script["historical_figure"].replace(" ", "_")
-    combined_path = os.path.join(output_dir, f"podcast_{character_name}.mp3")
+    combined_path = os.path.join(output_dir, f"audio.mp3")
     combined.export(combined_path, format="mp3")
     
     print(f"Podcast audio generated and saved to {combined_path}")
@@ -162,7 +179,7 @@ def process_script_to_audio(script_json_path, guest_voice_id):
         script = json.load(f)
     
     # Create a specific output directory for this podcast
-    output_dir = f"output/{script['historical_figure'].replace(' ', '_')}/audio"
+    output_dir = f"output/{script['historical_figure'].replace(' ', '_')}"
     
     # Generate the podcast audio
     audio_path = generate_podcast_audio(script, guest_voice_id, output_dir)
