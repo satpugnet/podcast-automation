@@ -122,11 +122,24 @@ def publish_episode(title, audio_path, description, transcript_path, image_path=
     return episode
 
 if __name__ == "__main__":
+    import sys
+    
     print("Running publication module directly")
+    
+    if len(sys.argv) < 5:
+        print("Usage: python publication.py <title> <audio_path> <transcript_path> <description> [publish_now]")
+        sys.exit(1)
+    
+    title = sys.argv[1]
+    audio_path = sys.argv[2]
+    transcript_path = sys.argv[3]
+    description = sys.argv[4]
+    publish_now = True if len(sys.argv) > 5 and sys.argv[5].lower() in ["true", "yes", "y", "1"] else False
+    
     publish_episode(
-        title="Napoleon Bonaparte",
-        audio_path="./output/Napoleon_Bonaparte/transcripts/podcast_Napoleon_Bonaparte_transcript.vtt",
-        transcript_path="./output/Napoleon_Bonaparte/transcript.txt",
-        description="In this extraordinary episode, Leo, our intrepid young time traveler, sits down with Napoleon Bonaparte shortly after his coronation as Emperor of France. Through intimate dialogue, the legendary military genius and statesman reveals the complexities behind his rise to power, strategic brilliance, and revolutionary reforms. Napoleon candidly discusses his Corsican childhood, battlefield innovations, the human cost of his campaigns, and the lasting impact of the Napoleonic Code. This rare glimpse into the mind of one of history's most influential figures illuminates both his visionary achievements and personal struggles, offering listeners a nuanced understanding of the man who reshaped Europe and modern governance.",
-        publish_now=True
+        title=title,
+        audio_path=audio_path,
+        transcript_path=transcript_path,
+        description=description,
+        publish_now=publish_now
     )

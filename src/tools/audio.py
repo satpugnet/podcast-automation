@@ -170,6 +170,11 @@ def process_script_to_audio(script_json_path, guest_voice_id):
     return audio_path
 
 if __name__ == "__main__":
-    script_path = "/Users/saturninpugnet/PycharmProjects/perso/podcast-automation/output/podcast_script_Napoleon_Bonaparte.json"
-    guest_voice_id = "VR6AewLTigWG4xSOukaG"
-    process_script_to_audio(script_path, guest_voice_id)
+    import sys
+    if len(sys.argv) > 2:
+        script_path = sys.argv[1]
+        guest_voice_id = sys.argv[2]
+        audio_path = process_script_to_audio(script_path, guest_voice_id)
+        print(f"Generated audio saved to: {audio_path}")
+    else:
+        print("Usage: python audio.py <script_path> <guest_voice_id>")

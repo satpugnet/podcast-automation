@@ -36,7 +36,7 @@ def generate_voice_description(character_name, max_characters=1000):
     logging.info(f"Generated historical voice description ({len(voice_description)} characters): {voice_description}")
     return voice_description
 
-def generate_voice_preview(character_name):
+def generate_voice(character_name):
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     logging.info(f"Starting voice preview generation for historical figure: {character_name}")
     
@@ -98,3 +98,12 @@ def generate_voice_preview(character_name):
                     print(f"Please enter a number between 1 and {len(previews_response.previews)}")
             except ValueError:
                 print("Invalid input. Please enter a number or 'r'")
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        character_name = sys.argv[1]
+        voice_id = generate_voice(character_name)
+        print(f"Generated voice ID for {character_name}: {voice_id}")
+    else:
+        print("Usage: python voice_design.py <character_name>")

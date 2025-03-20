@@ -18,8 +18,8 @@ generate_voice = input("Generate character voice? (yes/no) 🎙️: ")
 if not generate_voice in ["yes", "y"]:
     print("Voice generation skipped. ⏭️")
 else:
-    # Call the generate_voice_preview function only if user confirms by typing the character name
-    guest_voice_id = voice_design.generate_voice_preview(character_name=character_name)
+    # Call the generate_voice function only if user confirms by typing the character name
+    guest_voice_id = voice_design.generate_voice(character_name=character_name)
 
 
 # Ask user if they want to generate a podcast script
@@ -38,10 +38,7 @@ if generate_script in ["yes", "y"]:
     
     # Generate the script
     print(f"Generating podcast script for {character_name}... ✍️")
-    script = discussion_script.generate_podcast_script(character_name, additional_knowledge)
-    
-    # Save the script
-    script_path = discussion_script.save_script_to_file(script, script_path)
+    script_path = discussion_script.generate_podcast_script(historical_figure=character_name, additional_knowledge=additional_knowledge, script_path=script_path)
     print(f"Podcast script for {character_name} generated successfully! ✅")
 else:
     print("Podcast script generation skipped. ⏭️")

@@ -12,7 +12,7 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
         additional_knowledge (str, optional): Additional knowledge about the historical figure
         script_path (str, optional): Path to an existing script file to use instead of generating a new one
     Returns:
-        dict: A structured podcast script with sections for intro, arrival scene, conversation, and outro
+        str: Path to the saved podcast script file
     """
     # Load environment variables
     load_dotenv()
@@ -216,7 +216,9 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
             iteration += 1
             save_script_iteration(script, character_name, iteration)
         
-        return script
+        # Save the final script and return the path
+        output_file = save_script_to_file(script)
+        return output_file
     
     except Exception as e:
         print(f"Error generating podcast script: {e}")
@@ -250,6 +252,8 @@ def save_script_to_file(script, output_file=None):
     Args:
         script (dict): The podcast script to save
         output_file (str, optional): Path to save the script. If None, a filename with the character name will be created.
+    Returns:
+        str: Path to the saved script file
     """
     # Get character name from the script
     character_name = script.get("historical_figure", "Unknown")
@@ -268,3 +272,19 @@ def save_script_to_file(script, output_file=None):
     print(f"Script for {character_name} saved to {output_file}")
 
     return output_file
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        historical_figure = sys.argv[1]
+        additional_knowledge = None
+        
+        # Check if additional knowledge file is provided
+        if len(sys.argv) > 2:
+            with open(sys.argv[2], 'r', encoding='utf-8') as file:
+                additional_knowledge = file.read()
+        
+        script_path = generate_podcast_script(historical_figure=historical_figure, additional_knowledge=additional_knowledge)
+        print(f"Generated script saved to: {script_path}")
+    else:
+        print("Usage: python discussion_script.py <historical_figure> [additional_knowledge_file]")
