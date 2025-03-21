@@ -1,2 +1,7 @@
+# Voice Design
+- Better accent
+
+
+# Social Media
 - Every new episode, post on Linkedin and Twitter and announcement and a summary of the historical figure to build a habit for the audience about learning about historical figures. It sohuld be a TLDR and then say that if they want to know more, it is in the podcast.
     - Automate it too

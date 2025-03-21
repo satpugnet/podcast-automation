@@ -3,13 +3,13 @@ import json
 from openai import OpenAI
 from dotenv import load_dotenv
 
-def generate_podcast_script(historical_figure, additional_knowledge=None, script_path=None):
+def generate_podcast_script(historical_figure, background_research=None, script_path=None):
     """
     Generate a podcast script for the Time Traveler Podcast by sending a request to ChatGPT.
     
     Args:
         historical_figure (str): The name of the historical figure to interview
-        additional_knowledge (str, optional): Additional knowledge about the historical figure
+        background_research (str, optional): Background research about the historical figure
         script_path (str, optional): Path to an existing script file to use instead of generating a new one
     Returns:
         str: Path to the saved podcast script file
@@ -143,8 +143,8 @@ def generate_podcast_script(historical_figure, additional_knowledge=None, script
 
     # Construct the user prompt
     user_prompt = f"Create a podcast script for the Time Traveler Podcast interviewing {historical_figure}."
-    if additional_knowledge:
-        user_prompt += f"\n\nHere is additional research and factual information about {historical_figure} and their era which has been researched prior to the script being generated that can be used to enrich the script to ensure historical accuracy and educational value:\n\n{additional_knowledge}"
+    if background_research:
+        user_prompt += f"\n\nHere is background research and factual information about {historical_figure} and their era which has been researched prior to the script being generated that can be used to enrich the script to ensure historical accuracy and educational value:\n\n{background_research}"
     
     # Initialize messages list for the conversation with the AI
     messages = [
@@ -329,13 +329,13 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) > 1:
         historical_figure = sys.argv[1]
-        additional_knowledge = None
+        background_research = None
         existing_script_path = None
         
         # Check if additional knowledge file is provided
         if len(sys.argv) > 2:
             with open(sys.argv[2], 'r', encoding='utf-8') as file:
-                additional_knowledge = file.read()
+                background_research = file.read()
         
         # Check if existing script path is provided
         if len(sys.argv) > 3:
@@ -343,9 +343,9 @@ if __name__ == "__main__":
         
         script_path = generate_podcast_script(
             historical_figure=historical_figure, 
-            additional_knowledge=additional_knowledge,
+            background_research=background_research,
             script_path=existing_script_path
         )
         print(f"Generated script saved to: {script_path}")
     else:
-        print("Usage: python discussion_script.py <historical_figure> [additional_knowledge_file] [existing_script_path]")
+        print("Usage: python discussion_script.py <historical_figure> [background_research_path] [existing_script_path]")

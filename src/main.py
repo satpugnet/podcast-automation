@@ -42,15 +42,15 @@ if generate_script in ["yes", "y"]:
     script_path = None if script_path == "" else script_path
 
     # Optional additional knowledge
-    additional_knowledge_file_path = input("Enter additional knowledge file path (optional, press Enter to skip) 📚: ").strip()
-    additional_knowledge = None
-    if additional_knowledge_file_path:
-        with open(additional_knowledge_file_path, 'r', encoding='utf-8') as file:
-            additional_knowledge = file.read()
+    background_research_file_path = input("Enter background research file path (optional, press Enter to skip) 📚: ").strip()
+    background_research = None
+    if background_research_file_path:
+        with open(background_research_file_path, 'r', encoding='utf-8') as file:
+            background_research = file.read()
     
     # Generate the script
     print(f"Generating podcast script for {character_name}... ✍️")
-    script_path = discussion_script.generate_podcast_script(historical_figure=character_name, additional_knowledge=additional_knowledge, script_path=script_path)
+    script_path = discussion_script.generate_podcast_script(historical_figure=character_name, background_research=background_research, script_path=script_path)
     print(f"Podcast script for {character_name} generated successfully! ✅")
 else:
     print("Podcast script generation skipped. ⏭️")

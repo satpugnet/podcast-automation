@@ -62,7 +62,7 @@ A fully automated podcast where an inquisitive Time Traveler named Leo meets hum
 ## 🎤 **Voice Design**
 
 ### **Leo Voice Design Prompt**
-Design a voice profile for Leo, a young, enthusiastic, and adventurous time traveler, hosting lively conversations with historical figures. Leo's voice should embody youthful excitement, boundless energy, gentle innocence, and authentic curiosity—like a spirited explorer thrilled by each new discovery. His tone is clear, friendly, and full of genuine wonder, blending playful naivety with intellectual humility and subtle humor. Listeners should feel inspired by Leo's infectious enthusiasm, making every historical adventure feel vibrant and fun.
+Design a voice profile for Leo, a young, enthusiastic, and adventurous time traveler with a British accent, hosting lively conversations with historical figures. Leo's voice should embody youthful excitement, boundless energy, gentle innocence, and authentic curiosity—like a spirited explorer thrilled by each new discovery. His tone is clear, friendly, and full of genuine wonder, blending playful naivety with intellectual humility and subtle humor. His British accent should be modern, educated, and approachable—not overly posh or stuffy. Listeners should feel inspired by Leo's infectious enthusiasm, making every historical adventure feel vibrant and fun.
 
 Voice Qualities:
 - High-energy & Excited
@@ -73,6 +73,7 @@ Voice Qualities:
 - Authentically Curious
 - Warmly Humorous
 - Adventurous Spirit
+- Modern British Accent
 
 ---
 
