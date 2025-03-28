@@ -2,6 +2,8 @@ import os
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
+import pyperclip
+
 
 def generate_podcast_script(historical_figure, background_research=None, script_path=None):
     """
@@ -152,6 +154,10 @@ def generate_podcast_script(historical_figure, background_research=None, script_
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt}
     ]
+
+    # Copy the prompt to clipboard
+    pyperclip.copy(f"{system_prompt}\n\n{user_prompt}")
+    print("System prompt and user prompt copied to clipboard!")
     
     # Make the initial API call
     try:

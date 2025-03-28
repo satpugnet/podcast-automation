@@ -55,7 +55,7 @@ def generate_voice(character_name):
             voice_description=voice_description,
             text=sample_text,
             quality=0.80,
-            guidance_scale=100.0
+            guidance_scale=80.0
         )
 
         if not previews_response.previews:
