@@ -81,6 +81,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
           * Use active listening techniques to show engagement and encourage deeper sharing
           * Occasionally summarize or reflect on what's been shared before moving to a new topic
        - IMPORTANT: Explicitly ensure that most of the historical figure's responses are expansive, detailed, and richly informative. Avoid consistently short or superficial answers; instead, actively encourage the historical figure to delve deeply into their thoughts, motivations, and experiences.
+       - Occasionally include words or expressions in the historical figure's original language where it makes sense for realism and immersion, followed by subtle translations or contextual clues for understanding.
 
     4. Outro (1 min):
        - Concisely summarize key insights from the conversation.
