@@ -67,7 +67,7 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     # Define voice IDs for each speaker
     voice_ids = {
         "Narrator": "NOpBlnGInO9m6vDvFkFC",  # Adam voice for intro and outro
-        "Leo": "UgBBYS2sOqTuMpoF3BR0", # Currently UgBBYS2sOqTuMpoF3BR0 (Mark), used to be v2YwWtvprj8WUvzb7D4K (Leo Time Traveler)
+        "Leo": "v2YwWtvprj8WUvzb7D4K", # Currently UgBBYS2sOqTuMpoF3BR0 (Mark), used to be v2YwWtvprj8WUvzb7D4K (Leo Time Traveler)
         script["historical_figure"]: guest_voice_id
     }
     

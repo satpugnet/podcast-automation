@@ -6,6 +6,7 @@ from tools import audio
 from tools import publication
 from tools import transcript
 from tools import background_search
+from tools import social_media
 import json
 
 
@@ -24,16 +25,22 @@ def print_step(number, title):
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Time Traveler Podcast Generator")
-    parser.add_argument("--name", help="Name of the historical character")
+    parser.add_argument("--character-name", help="Name of the historical character")
     parser.add_argument("--guest-voice-id", help="Voice ID for the historical character")
-    parser.add_argument("--background-file", help="Path to the background research file")
+    parser.add_argument("--background-research-path", help="Path to the background research file")
     parser.add_argument("--script-path", help="Path to an existing script file")
+    parser.add_argument("--audio-path", help="Path to an existing audio file")
+    parser.add_argument("--transcript-path", help="Path to an existing transcript file")
+    parser.add_argument("--social-media-path", help="Path to an existing social media posts file")
     args = parser.parse_args()
 
-    script_path = None
+    character_name = None
     guest_voice_id = None
+    background_research_path = None
+    script_path = None
     audio_path = None
     transcript_path = None
+    social_media_path = None
 
     # Welcome message
     print("\n" + "=" * 60)
@@ -47,7 +54,7 @@ def main():
     # =============================================
     print_step(1, "CHARACTER SELECTION")
 
-    character_name = args.name
+    character_name = args.character_name
     if not character_name:
         character_name = input("🧠 Enter the name of the historical character: ")
     
@@ -75,17 +82,17 @@ def main():
     # =============================================
     print_step(3, "BACKGROUND RESEARCH")
     
-    background_research_file_path = args.background_file
-    if not background_research_file_path:
+    background_research_path = args.background_research_path
+    if not background_research_path:
         print(f"🔄 Preparing background research template for {character_name}...")
         background_search.print_background_search_template(character_name)
-        background_research_file_path = input("📚 Enter background research file path: ").strip()
+        background_research_path = input("📚 Enter background research file path: ").strip()
     
-    print(f"🔄 Loading background research from {background_research_file_path}...")
-    with open(background_research_file_path, 'r', encoding='utf-8') as file:
+    print(f"🔄 Loading background research from {background_research_path}...")
+    with open(background_research_path, 'r', encoding='utf-8') as file:
         background_research = file.read()
         
-    print(f"✅ Background research loaded successfully from {background_research_file_path}")
+    print(f"✅ Background research loaded successfully from {background_research_path}")
 
     # =============================================
     # ========= STEP 4: SCRIPT GENERATION ========
@@ -118,10 +125,15 @@ def main():
     # =============================================
     print_step(5, "AUDIO GENERATION")
 
-    input("🔊 Generating podcast audio, press Enter to continue...")
+    audio_path = args.audio_path
+    if audio_path:
+        print(f"ℹ️ Using audio provided via command line: {audio_path}")
+    else:
+        input("🔊 Generating podcast audio, press Enter to continue...")
 
-    print(f"🔄 Generating podcast audio for script at {script_path}...")
-    audio_path = audio.process_script_to_audio(script_path, guest_voice_id)
+        print(f"🔄 Generating podcast audio for script at {script_path}...")
+        audio_path = audio.process_script_to_audio(script_path, guest_voice_id)
+    
     print(f"✅ Podcast audio generated successfully and saved at path: {audio_path}")
 
     # =============================================
@@ -129,15 +141,38 @@ def main():
     # =============================================
     print_step(6, "TRANSCRIPT GENERATION")
 
-    input("📝 Generating podcast transcript, press Enter to continue...")
-    print(f"🔄 Generating transcript for {script_data['title']}...")
-    transcript_path = transcript.generate_vtt_from_audio(script_data, audio_path)
+    transcript_path = args.transcript_path
+    if transcript_path:
+        print(f"ℹ️ Using transcript provided via command line: {transcript_path}")
+    else:
+        input("📝 Generating podcast transcript, press Enter to continue...")
+        print(f"🔄 Generating transcript for {script_data['title']}...")
+        transcript_path = transcript.generate_vtt_from_audio(script_data, audio_path)
+    
     print(f"✅ Transcript generated successfully and saved at path: {transcript_path}")
 
     # =============================================
-    # ======= STEP 7: EPISODE PUBLICATION ========
+    # ======= STEP 7: SOCIAL MEDIA POSTS =========
     # =============================================
-    print_step(7, "EPISODE PUBLICATION")
+    print_step(7, "SOCIAL MEDIA POSTS")
+    
+    social_media_path = args.social_media_path
+    if social_media_path:
+        print(f"ℹ️ Using social media posts provided via command line: {social_media_path}")
+    else:
+        input("📱 Generating social media posts, press Enter to continue...")
+        print(f"🔄 Generating social media posts for {script_data['title']}...")
+        posts, social_media_path = social_media.generate_social_media_posts(
+            script_path=script_path,
+            background_research=background_research
+        )
+    
+    print(f"✅ Social media posts generated successfully and saved at path: {social_media_path}")
+
+    # =============================================
+    # ======= STEP 8: EPISODE PUBLICATION ========
+    # =============================================
+    print_step(8, "EPISODE PUBLICATION")
        
     image_path = input("🖼️ Enter the path to the episode image (optional, press Enter to skip): ")
     image_path = image_path if image_path else None
@@ -164,8 +199,8 @@ def main():
     # ============= COMPLETION MESSAGE ===========
     # =============================================
     print_header("PODCAST GENERATION COMPLETE")
-    print("Thank you for using Time Traveler Podcast Generator!".center(60))
-    print("Your journey through history continues...".center(60))
+    print("🎉 Thank you for using Time Traveler Podcast Generator! 🎉".center(60))
+    print("🚀 Your journey through history continues... ⏳".center(60))
 
 
 if __name__ == "__main__":
