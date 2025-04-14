@@ -28,7 +28,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     
     # Construct the system prompt
     system_prompt = """
-    Create a richly detailed, engaging, and immersive podcast script (~20 minutes) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
+    Create a richly detailed, engaging, and immersive podcast script (~40 minutes) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
 
     This is a pedagogical educational podcast designed for a general audience. The content should be accessible, engaging, and informative for listeners of various backgrounds and knowledge levels.
 
@@ -148,7 +148,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     user_prompt = f"Create a podcast script for the Time Traveler Podcast interviewing {historical_figure}."
     if background_research:
         user_prompt += f"\n\nHere is background research and factual information about {historical_figure} and their era which has been researched prior to the script being generated that can be used to enrich the script to ensure historical accuracy and educational value:\n\n{background_research}"
-    
+
     # Initialize messages list for the conversation with the AI
     messages = [
         {"role": "system", "content": system_prompt},

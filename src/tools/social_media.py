@@ -56,7 +56,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
     - LinkedIn: Professional yet personal (~800 characters), structured clearly into three short paragraphs.
     - X/Twitter: Punchy, casual, engaging (max 280 characters), structured into two short paragraphs—concise announcement and summary combined first, followed by a separate friendly invitation.
 
-    Return your response strictly as JSON, no markdown or syntax highlighting:
+    Return your response strictly as JSON, no markdown, syntax highlighting, ```json or ```:
 
     {
         "linkedin": "...",
