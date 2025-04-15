@@ -26,18 +26,18 @@ def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Time Traveler Podcast Generator")
     parser.add_argument("--character-name", help="Name of the historical character")
-    parser.add_argument("--guest-voice-id", help="Voice ID for the historical character")
     parser.add_argument("--background-research-path", help="Path to the background research file")
     parser.add_argument("--script-path", help="Path to an existing script file")
+    parser.add_argument("--guest-voice-id", help="Voice ID for the historical character")
     parser.add_argument("--audio-path", help="Path to an existing audio file")
     parser.add_argument("--transcript-path", help="Path to an existing transcript file")
     parser.add_argument("--social-media-path", help="Path to an existing social media posts file")
     args = parser.parse_args()
 
     character_name = None
-    guest_voice_id = None
     background_research_path = None
     script_path = None
+    guest_voice_id = None
     audio_path = None
     transcript_path = None
     social_media_path = None
@@ -61,26 +61,9 @@ def main():
     print(f"✅ Historical character selected: {character_name}")
 
     # =============================================
-    # ========= STEP 2: VOICE GENERATION =========
+    # ========= STEP 2: BACKGROUND RESEARCH ======
     # =============================================
-    print_step(2, "VOICE GENERATION")
-    
-    guest_voice_id = args.guest_voice_id
-    if not guest_voice_id:
-        if input("🎙️ Generate character voice? (yes/no): ").lower().strip() in ["yes", "y"]:
-            print(f"🔄 Generating voice for {character_name}...")
-            guest_voice_id = voice_design.generate_voice(character_name=character_name)
-            print(f"✅ Voice generated successfully! Voice ID: {guest_voice_id}")
-        else:
-            print("⏭️ Voice generation skipped.")
-            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure: ")
-    
-    print(f"✅ Voice ID set to: {guest_voice_id}")
-
-    # =============================================
-    # ========= STEP 3: BACKGROUND RESEARCH ======
-    # =============================================
-    print_step(3, "BACKGROUND RESEARCH")
+    print_step(2, "BACKGROUND RESEARCH")
     
     background_research_path = args.background_research_path
     if not background_research_path:
@@ -95,9 +78,9 @@ def main():
     print(f"✅ Background research loaded successfully from {background_research_path}")
 
     # =============================================
-    # ========= STEP 4: SCRIPT GENERATION ========
+    # ========= STEP 3: SCRIPT GENERATION ========
     # =============================================
-    print_step(4, "SCRIPT GENERATION")
+    print_step(3, "SCRIPT GENERATION")
 
     script_path = args.script_path
     if script_path:
@@ -119,6 +102,23 @@ def main():
         script_data = json.load(file)
 
     print(f"✅ Podcast script generated successfully and saved at path: {script_path}")
+
+    # =============================================
+    # ========= STEP 4: VOICE GENERATION =========
+    # =============================================
+    print_step(4, "VOICE GENERATION")
+    
+    guest_voice_id = args.guest_voice_id
+    if not guest_voice_id:
+        if input("🎙️ Generate character voice? (yes/no): ").lower().strip() in ["yes", "y"]:
+            print(f"🔄 Generating voice for {character_name}...")
+            guest_voice_id, voice_file_path = voice_design.generate_voice(character_name=character_name)
+            print(f"✅ Voice generated successfully! Voice ID: {guest_voice_id}")
+        else:
+            print("⏭️ Voice generation skipped.")
+            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure: ")
+    
+    print(f"✅ Voice ID set to: {guest_voice_id}, Voice ID saved at path: {voice_file_path}")
 
     # =============================================
     # ========= STEP 5: AUDIO GENERATION =========

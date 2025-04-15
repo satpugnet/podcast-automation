@@ -5,6 +5,7 @@ import logging
 from elevenlabs import Voice, VoiceSettings, play
 from elevenlabs.client import ElevenLabs
 import openai
+import json
 
 def generate_voice_description(character_name, max_characters=1000):
     """Generate a voice description for a historical character using OpenAI."""
@@ -95,7 +96,14 @@ def generate_voice(character_name):
                     )
 
                     logging.info(f"Historical voice creation completed. New Voice ID: {voice_response.voice_id}")
-                    return voice_response.voice_id
+                    
+                    # Save the voice ID to a file
+                    voice_file_path = os.path.join(os.path.join("output", character_name.replace(" ", "_")), "voice_id.json")
+                    with open(voice_file_path, 'w') as f:
+                        json.dump({"voice_id": voice_response.voice_id}, f)
+                    
+                    logging.info(f"Voice ID saved to {voice_file_path}")
+                    return voice_response.voice_id, voice_file_path
                 else:
                     print(f"Please enter a number between 1 and {len(previews_response.previews)}")
             except ValueError:
@@ -105,7 +113,8 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) > 1:
         character_name = sys.argv[1]
-        voice_id = generate_voice(character_name)
+        voice_id, voice_file_path = generate_voice(character_name)
         print(f"Generated voice ID for {character_name}: {voice_id}")
+        print(f"Voice ID saved to {voice_file_path}")
     else:
         print("Usage: python voice_design.py <character_name>")
