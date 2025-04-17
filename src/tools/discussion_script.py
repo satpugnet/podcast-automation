@@ -117,7 +117,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
 
     IMPORTANT: Format your response strictly as a JSON object with the following structure, ONLY THE JSON, NO markdown or syntax highlighting:
     {
-        "title": "Episode title", // Just put the name of the historical figure
+        "title": "Episode title", // Make it SEO friendly and follow the format "<Name of historical figure> - <one line hook / payoff>"
         "description": "Brief podcast episode description for publication",
         "historical_figure": "Name of the historical figure",
         "time_period": "Time period of the conversation",
