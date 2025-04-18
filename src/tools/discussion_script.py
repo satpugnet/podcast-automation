@@ -28,9 +28,9 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     
     # Construct the system prompt
     system_prompt = """
-    Create a richly detailed, engaging, and immersive podcast script (~40 minutes) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
+    Create a richly detailed, engaging, and immersive podcast script (~40 minutes/6000-6500 words) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
 
-    This is a pedagogical educational podcast designed for a general audience. The content should be accessible, engaging, and informative for listeners of various backgrounds and knowledge levels.
+    This is a pedagogical educational podcast designed for a general audience. The content should be accessible, engaging, and informative for listeners of various backgrounds and knowledge levels. The goal is to make the audience learn about the historical figure and their life in a compelling way.
 
     Detailed Structure:
 
@@ -72,7 +72,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
        - Vary exchange lengths naturally:
           * Brief, snappy exchanges for lighter moments or quick clarifications.
           * Allow frequent opportunities for the historical figure to give extended, detailed responses (averaging 150-300 words), especially when sharing personal stories, explaining complex ideas, or discussing significant events.
-          * Give the historical figure space for occasional extended monologues (1-3 minutes) to deeply reflect or passionately explain important topics.
+          * Give the historical figure space for more extended monologues (1-3 minutes) to deeply reflect or passionately explain important topics.
           * Ensure Leo's questions range from short, spontaneous reactions to more thoughtful inquiries.
           * Maintain a conversational rhythm that ebbs and flows naturally.
        - IMPORTANT: Model the conversation after professional interview podcasts where the host (Leo) guides the guest (historical figure) into sharing expansively about themselves and their world. Leo should:
@@ -114,6 +114,9 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     - Always include an indication of the sound's duration (in seconds) and volume progression (starting soft/loud and how it changes) to guide the AI sound generation system.
 
     Note: You can include <break time="x.xs" /> tags in the text to specify pauses in character speech (e.g., "I never expected that. <break time="1.5s" /> How fascinating.").
+
+    Deliver a story that grips listeners in the first 30 seconds and sustains their curiosity to the end.
+    Balance vivid scene-setting with rigorous historical accuracy; clarify any debated points in-dialogue.
 
     IMPORTANT: Format your response strictly as a JSON object with the following structure, ONLY THE JSON, NO markdown or syntax highlighting:
     {
@@ -161,10 +164,10 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     
     # Make the initial API call
     try:
-        print("Generating initial podcast script with GPT-4o...")
+        print(f"Generating initial podcast script with {os.getenv('OPENAI_MODEL')}...")
         if not script_path:
             response = client.chat.completions.create(
-                model="gpt-4o",
+                model=os.getenv("OPENAI_MODEL"),
                 messages=messages,
                 temperature=0.7
             )
@@ -222,7 +225,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
             
             # Get improved script
             improved_response = client.chat.completions.create(
-                model="gpt-4o",
+                model=os.getenv("OPENAI_MODEL"),
                 messages=messages,
                 temperature=0.7
             )

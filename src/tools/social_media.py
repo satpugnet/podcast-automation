@@ -62,6 +62,8 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
         "linkedin": "...",
         "x": "..."
     }
+    
+    Important: Use actual line breaks in your response, not the escape sequence \\n.
     """
     # Construct the user prompt
     user_prompt = f"""
@@ -83,7 +85,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
     
     # Call ChatGPT API to generate social media posts
     response = client.chat.completions.create(
-        model="gpt-4o",  # or another appropriate model
+        model=os.getenv("OPENAI_MODEL"),  # or another appropriate model
         messages=messages,
         temperature=0.7,
         max_tokens=1000
@@ -122,7 +124,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
         # Get improved posts based on feedback
         print("\nGenerating improved posts based on your feedback...")
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model=os.getenv("OPENAI_MODEL"),
             messages=messages,
             temperature=0.7,
             max_tokens=1000

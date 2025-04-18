@@ -109,6 +109,7 @@ def main():
     print_step(4, "VOICE GENERATION")
     
     guest_voice_id = args.guest_voice_id
+    voice_file_path = None
     if not guest_voice_id:
         if input("🎙️ Generate character voice? (yes/no): ").lower().strip() in ["yes", "y"]:
             print(f"🔄 Generating voice for {character_name}...")

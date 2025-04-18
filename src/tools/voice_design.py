@@ -25,7 +25,7 @@ def generate_voice_description(character_name, max_characters=1000):
     """
     
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model=os.getenv("OPENAI_MODEL"),
         messages=[
             {"role": "system", "content": "You are a historical voice expert who specializes in creating authentic voice profiles for historical figures based on primary sources, biographical accounts, and period-appropriate linguistic patterns."},
             {"role": "user", "content": prompt}
@@ -99,6 +99,7 @@ def generate_voice(character_name):
                     
                     # Save the voice ID to a file
                     voice_file_path = os.path.join(os.path.join("output", character_name.replace(" ", "_")), "voice_id.json")
+                    os.makedirs(os.path.dirname(voice_file_path), exist_ok=True)
                     with open(voice_file_path, 'w') as f:
                         json.dump({"voice_id": voice_response.voice_id}, f)
                     

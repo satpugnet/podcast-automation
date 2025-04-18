@@ -16,7 +16,7 @@ def seconds_to_timestamp(seconds):
 
 def identify_speakers(script, transcript_text):
     """
-    Use GPT-4o to identify which speaker_id corresponds to which character in the script
+    Use OpenAI to identify which speaker_id corresponds to which character in the script
     
     Args:
         script (dict): The podcast script with character information
@@ -67,7 +67,7 @@ def identify_speakers(script, transcript_text):
     """
     
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model=os.getenv("OPENAI_MODEL"),
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
@@ -113,7 +113,7 @@ def generate_vtt_from_audio(script, audio_path, output_file=None):
     )
 
     if output_file is None:
-        output_file = f"output/{script['title'].replace(' ', '_')}/transcript.vtt"
+        output_file = f"output/{script['historical_figure'].replace(' ', '_')}/transcript.vtt"
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
