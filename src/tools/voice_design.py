@@ -30,7 +30,7 @@ def generate_voice_description(character_name, max_characters=1000):
             {"role": "system", "content": "You are a historical voice expert who specializes in creating authentic voice profiles for historical figures based on primary sources, biographical accounts, and period-appropriate linguistic patterns."},
             {"role": "user", "content": prompt}
         ],
-        max_tokens=int(max_characters/6)
+        max_completion_tokens=int(max_characters/6)
     )
     
     voice_description = response.choices[0].message.content.strip()

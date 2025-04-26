@@ -17,9 +17,9 @@ def print_header(text):
     print("=" * 60)
 
 
-def print_step(number, title):
+def print_step(number, title, total=8):
     """Print a step header."""
-    print_header(f"STEP {number}: {title}")
+    print_header(f"STEP {number}/{total}: {title}")
 
 
 def main():
@@ -57,6 +57,9 @@ def main():
     character_name = args.character_name
     if not character_name:
         character_name = input("🧠 Enter the name of the historical character: ")
+
+    os.makedirs(f"output/{character_name.replace(' ', '_')}", exist_ok=True)
+    current_episode_folder_path = f"output/{character_name.replace(' ', '_')}"
     
     print(f"✅ Historical character selected: {character_name}")
 
@@ -69,7 +72,8 @@ def main():
     if not background_research_path:
         print(f"🔄 Preparing background research template for {character_name}...")
         background_search.print_background_search_template(character_name)
-        background_research_path = input("📚 Enter background research file path: ").strip()
+        default_path = f"{current_episode_folder_path}/background_research.txt"
+        background_research_path = input(f"📚 Enter background research file path (or press enter to use default path: {default_path}): ").strip() or default_path
     
     print(f"🔄 Loading background research from {background_research_path}...")
     with open(background_research_path, 'r', encoding='utf-8') as file:
@@ -86,7 +90,10 @@ def main():
     if script_path:
         print(f"ℹ️ Using script provided via command line: {script_path}")
     else:
-        script_path = input("📄 Enter path to existing script file (optional, press Enter to generate new script): ")
+        script_path = input("📄 Enter path to existing script file (optional, press Enter to generate new script, press 'd' for default): ")
+        if script_path.lower() == 'd':
+            script_path = f"{current_episode_folder_path}/script.json"
+            print(f"ℹ️ Using default script path: {script_path}")
         script_path = None if script_path == "" else script_path
 
         if script_path:
@@ -111,13 +118,18 @@ def main():
     guest_voice_id = args.guest_voice_id
     voice_file_path = None
     if not guest_voice_id:
-        if input("🎙️ Generate character voice? (yes/no): ").lower().strip() in ["yes", "y"]:
+        if input("🎙️ Generate character voice? (press y for yes, any other key for no): ").lower().strip() in ["yes", "y"]:
             print(f"🔄 Generating voice for {character_name}...")
             guest_voice_id, voice_file_path = voice_design.generate_voice(character_name=character_name)
             print(f"✅ Voice generated successfully! Voice ID: {guest_voice_id}")
         else:
             print("⏭️ Voice generation skipped.")
-            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure: ")
+            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure (press 'd' for default): ")
+            if guest_voice_id.lower() == 'd':
+                voice_id_file_path = f"{current_episode_folder_path}/voice_id.json"
+                with open(voice_id_file_path, 'r') as file:
+                    guest_voice_id = json.load(file)["voice_id"]
+                print(f"ℹ️ Using default voice ID: {guest_voice_id}")
     
     print(f"✅ Voice ID set to: {guest_voice_id}, Voice ID saved at path: {voice_file_path}")
 

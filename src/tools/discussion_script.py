@@ -34,17 +34,17 @@ def generate_podcast_script(historical_figure, background_research=None, script_
 
     Detailed Structure:
 
-    1. Intro (1 min):
+    1. Intro (1-2 mins):
        - Begin with an intriguing narrative hook or fascinating anecdote that captures listeners' curiosity immediately.
        - Briefly introduce the historical figure, emphasizing why their story resonates today.
        - Clearly establish the time period and location for the listener's orientation.
 
-    2. Arrival Scene (1-2 mins):
+    2. Arrival Scene (2-3 mins):
        - Set a vivid, immersive scene rich in sensory detail (visuals, sounds, atmosphere) that transports listeners directly into the historical context.
        - Depict Leo's gentle and believable arrival into the setting, smoothly transitioning into the first interaction without abruptness.
        - Explicitly mention the specific location, date, and relevant historical context to ground the audience.
 
-    3. Conversation (15-18 mins):
+    3. Conversation (32-35 mins):
        - Open the dialogue casually, establishing rapport gently and naturally before gradually deepening the discussion.
        - Avoid overly sharp or direct initial questions. Start with friendly or intriguing points of mutual interest, setting a comfortable conversational tone.
        - Gradually progress into key life events, personal anecdotes, emotional challenges, notable achievements, and formative experiences of the historical figure.
@@ -71,10 +71,10 @@ def generate_podcast_script(historical_figure, background_research=None, script_
        - Include at least 50 exchanges between Leo and the historical figure for depth and comprehensive coverage.
        - Vary exchange lengths naturally:
           * Brief, snappy exchanges for lighter moments or quick clarifications.
-          * Allow frequent opportunities for the historical figure to give extended, detailed responses (averaging 150-300 words), especially when sharing personal stories, explaining complex ideas, or discussing significant events.
-          * Give the historical figure space for more extended monologues (1-3 minutes) to deeply reflect or passionately explain important topics.
+          * Allow frequent opportunities for the historical figure to give extended, detailed responses, especially when sharing personal stories, explaining complex ideas, or discussing significant events.
+          * Give the historical figure space for more extended monologues (of a few minutes) to deeply reflect or passionately explain important topics.
           * Ensure Leo's questions range from short, spontaneous reactions to more thoughtful inquiries.
-          * Maintain a conversational rhythm that ebbs and flows naturally.
+          * Maintain a conversational rhythm that ebbs and flows naturally. It should not be just back to back questions and answers.
        - IMPORTANT: Model the conversation after professional interview podcasts where the host (Leo) guides the guest (historical figure) into sharing expansively about themselves and their world. Leo should:
           * Ask open-ended questions that invite detailed responses
           * Follow up on interesting points to draw out more information
@@ -85,7 +85,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
        - IMPORTANT: Explicitly ensure that most of the historical figure's responses are expansive, detailed, and richly informative. Avoid consistently short or superficial answers; instead, actively encourage the historical figure to delve deeply into their thoughts, motivations, and experiences.
        - Occasionally include words or expressions in the historical figure's original language where it makes sense for realism and immersion, followed by subtle translations or contextual clues for understanding.
 
-    4. Outro (1 min):
+    4. Outro (1-2 mins):
        - Concisely summarize key insights from the conversation.
        - Share an inspiring or thought-provoking takeaway.
 
@@ -168,8 +168,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
         if not script_path:
             response = client.chat.completions.create(
                 model=os.getenv("OPENAI_MODEL"),
-                messages=messages,
-                temperature=0.7
+                messages=messages
             )
             
             # Extract and parse the response
@@ -226,8 +225,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
             # Get improved script
             improved_response = client.chat.completions.create(
                 model=os.getenv("OPENAI_MODEL"),
-                messages=messages,
-                temperature=0.7
+                messages=messages
             )
             
             improved_script_json = improved_response.choices[0].message.content

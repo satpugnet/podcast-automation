@@ -86,9 +86,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
     # Call ChatGPT API to generate social media posts
     response = client.chat.completions.create(
         model=os.getenv("OPENAI_MODEL"),  # or another appropriate model
-        messages=messages,
-        temperature=0.7,
-        max_tokens=1000
+        messages=messages
     )
     
     # Extract the generated content
@@ -125,9 +123,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
         print("\nGenerating improved posts based on your feedback...")
         response = client.chat.completions.create(
             model=os.getenv("OPENAI_MODEL"),
-            messages=messages,
-            temperature=0.7,
-            max_tokens=1000
+            messages=messages
         )
         
         # Extract the updated content

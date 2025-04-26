@@ -61,7 +61,7 @@ def identify_speakers(script, transcript_text):
     {json.dumps(script.get('conversation', [])[:10], indent=2)}
     
     Here is a sample of the transcript with generic speaker IDs:
-    {transcript_text[:1000]}
+    {transcript_text[:5000]}
     
     Please identify which speaker_id corresponds to which character (Leo, {historical_figure}, or Narrator).
     """
@@ -71,8 +71,7 @@ def identify_speakers(script, transcript_text):
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.3
+        ]
     )
     
     try:
