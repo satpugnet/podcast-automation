@@ -1,0 +1,326 @@
+{
+  "title": "Leonardo da Vinci - Unlocking the Mind of the Ultimate Renaissance Genius",
+  "description": "Join time traveler Leo in an immersive, 40-minute journey through Leonardo da Vinci’s life and mind, from Tuscan boyhood to French court, exploring art, science, inventions, and the human spirit in Leonardo’s own words.",
+  "historical_figure": "Leonardo da Vinci",
+  "time_period": "1452–1519 (Italian High Renaissance)",
+  "location": "Clos Lucé, Amboise, France",
+  "intro": [
+    {
+      "speaker": "Narrator",
+      "text": "Imagine stepping into a world where art, science, and invention flow through a single mind. <break time=\"0.5s\"/> Leonardo da Vinci was that mind. Today, his secrets are about to be revealed."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Soft Renaissance lute melody rising from pianissimo to mezzo-piano before gently fading",
+      "duration": 12
+    }
+  ],
+  "arrival_scene": [
+    {
+      "speaker": "Narrator",
+      "text": "April 1519, the sun sets over the Château d’Amboise. In the manor of Clos Lucé, Leonardo sits by a low table cluttered with sketches. A flash of temporal light and Leo appears, eyes wide with wonder."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Minutes-old crackling hearth fire, distant church bells chiming faintly, hush of evening cicadas",
+      "duration": 14
+    }
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Master Leonardo, I’ve traveled centuries to meet you. Your reputation precedes you—genius of art and science."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Benvenuto, Leo. Your clothes and speech are strange, yet your curiosity is universal. Let us speak."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I’d like to start at the beginning. What was life like on your family’s estate in Vinci?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I was born in a humble hamlet among olive groves and vineyards. My mother, Caterina, raised me near Anchiano. Nature was my earliest tutor—rivers, birds, stones, and skies taught me to observe."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You had no formal surname then—why ‘da Vinci’?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Da Vinci simply means ‘of Vinci.’ It identified my birthplace, not a lineage. I signed my works ‘Leonardo,’ but later generations added ‘da Vinci’ to honor my origin."
+    },
+    {
+      "speaker": "Leo",
+      "text": "At fourteen you went to Florence to join Andrea del Verrocchio. How did that apprenticeship shape you?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Verrocchio’s workshop was a crucible of talent—painting, sculpture, mechanics. I learned technique there, but I also diverged, studying anatomy, geometry, and flight when no one asked."
+    },
+    {
+      "speaker": "Leo",
+      "text": "The story says you painted an angel so lifelike Verrocchio hung up his brush. Fact or legend?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Vasari told that tale, perhaps to illustrate our bond. He was a master; I was a student. If I surpassed him in one piece, he still guided me in countless others."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Early drawings show extreme precision—like your 1473 Arno Valley sketch. What drove you to draw landscapes so young?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I saw patterns in nature: rivulets tracing paths like nerves, trees branching like vessels. Landscape taught me perspective and geology before I knew their names."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In Florence’s Medici courts, you mingled with Ficino and Pico della Mirandola. How did Neoplatonism influence you?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "They taught that beauty and nature reflect divine order. I believed knowledge springs from observing nature’s unity—art and science are one continuous pursuit."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Yet in 1476 you faced a sodomy accusation. Did that change your approach to personal life?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "The accusation was unsigned, dismissed, yet shocking. I retreated into my studio, guarded my privacy, and poured my passion into study rather than romance."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your first independent commission was an altarpiece for San Donato, which you left unfinished. What happened?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Perfectionism and curiosity derailed me. I spent more time studying anatomy and machinery than panel and pigment. My ideals often outpaced patrons’ patience."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In 1482 you wrote to Ludovico Sforza describing cannons and canals, tucking art at the letter’s end. A bold pitch?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I offered solutions to warfare, hydraulics, and civic planning—things a duke valued. Painting was a delight, but engineering paid the bills."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You arrived in Milan with a silver lyre—an inventive gift that showcased your musical talent."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Music and mechanics intertwined. I carved the horse-head lyre, set strings to mimic neighing, demonstrating I was more than a painter."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In Milan you designed stage automata—mechanical animals, trick fountains. How did you merge spectacle and science?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "A court needed wonder. I created self-moving lions, roaring dragons. The mechanisms—gears, pulleys—mirrored nature’s joints and muscles in motion."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your Virgin of the Rocks shows geological accuracy—modern scientists still applaud it."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I measured strata along streams, noting sandstone and basalt layers. Painting them taught geology to art and art to geology."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Then came The Last Supper, your masterpiece in Santa Maria delle Grazie."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I arranged Christ and the Twelve in dynamic groups, perspective lines pulling viewers to Christ’s head. Emotion and geometry intertwined."
+    },
+    {
+      "speaker": "Leo",
+      "text": "But your experimental dry-wall method caused rapid decay. Would you do it again?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Experiment demands risk. I craved revision. Fresco would last longer, yet I regret not testing binding agents more thoroughly."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your great equestrian statue clay model stood 24 feet tall, yet war melted the bronze. How did you cope?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I studied horse anatomy for years—writing treatises, dissecting carcasses. To see the model destroyed by cannons was a painful lesson in politics' power over art."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Back in Florence you faced Michelangelo’s fierce talent on the opposite wall with Battle of Anghiari."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Michelangelo’s spirit burned hot. I tried encaustic oil-on-wall for Anghiari—colors ran. Frustration matched his insults that day on the street."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did rivalry spur you or weigh you down?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Competition sharpens skill, yet I prefer cooperation. Our differences—polish versus passion—marked two paths to genius."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You painted Mona Lisa between 1503–1506 yet never delivered it, carrying it with you thereafter."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Lisa’s gaze held infinite depth. I layered glazes of sfumato for decades. It became my philosophical statement: art evolves with the artist."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Sfumato and chiaroscuro changed painting forever. How did you develop those techniques?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I observed light scattering through air, softening edges. Oil allowed subtle gradations—like smoke dissolving boundaries between form and void."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your Vitruvian Man combines classical proportions with human anatomy."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Vitruvius taught that man fits circle and square—image of perfection. I drew muscles, joints, turn by turn, harmonizing art and mathematics."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In Venice you proposed a diving suit for underwater assault but withheld publication fearing misuse."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Invention bears responsibility. A man can do great good or evil. I chose charity over credit."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You mapped Imola in plan view—one of history’s first aerial maps."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Using dials and plumb lines, I measured streets from terraces, translating vertical angles to flat map—an early cartographer’s feat."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Under Pope Leo X in Rome, Raphael and Michelangelo dominated while you researched optics."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Rome’s light beckoned me to lens and mirror experiments. The Pope admired results more than trials; I dug cadavers until banned."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your anatomy drawings revealed heart vortices and fetal positions centuries ahead of scientists."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I created glass heart models, pumped fluid to watch valves seal by vortex. In dissection I saw the womb’s geometry."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You wrote in mirror script, fueling myths of secret codes."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Left-bearing quill against my palm smoked. Writing backward kept ink from blurring. No cipher, just convenience."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your notebooks show dreams of flying machines—ornithopters and the aerial screw."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I studied bats and birds, sketched wings of parchment and reed. The aerial screw compresses air into lift—it awaited engines beyond human muscle."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You devised a turtle-shaped tank bristling with cannons—foreshadowing armored vehicles."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Milanese warfare demanded innovation. I sketched armored cars with cranks, solving psychological and mechanical battles together."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You also designed civil works—canals, locks, ideal city streets after plague halted Milan."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Water is nature’s force. I envisioned Arno canals to flood Pisa and reclaim land. Straight boulevards to carry clean air—and sewage away."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your friendships included Bramante and Machiavelli on engineering schemes."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Bramante and I shared geometric studies; Machiavelli and I plotted Arno’s diversion. Even warlords valued rational planning."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In 1516 Francis I invited you to France as Premier Painter and Architect."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "King Francis embraced me as ‘Father.’ At Cloux, I sketched urban dreams and taught Melzi, my devoted student."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your health declined, right-hand paralysis after a stroke. How did you adapt?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "My right arm failed, but left-handed I sketched and wrote. My mind soared beyond physical limits."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Cardinal d’Aragona recorded you showing Mona Lisa, St. John Baptist, and St. Anne to visitors."
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "I loved sharing glories and experiments, though pride flagged with age. Each painting carried a piece of my soul."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You bequeathed notebooks to Francesco Melzi. Did you worry your discoveries would vanish?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Melzi was careful. Yet my papers scattered after death. Great ideas sometimes need time to resurface."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Reflecting on your life, what drives you even now?"
+    },
+    {
+      "speaker": "Leonardo da Vinci",
+      "text": "Curiosity. Iron rusts from disuse; so must the mind stay active. Observation, experiment, and imagination—they are one."
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Leo",
+      "text": "Thank you, Master Leonardo, for an unforgettable journey through art, science, and the boundless reach of curiosity."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Leonardo da Vinci taught us that knowledge need not be confined—every discipline connects. May we, like him, see how ‘everything proceeds from everything else.’"
+    },
+    {
+      "speaker": "SFX",
+      "text": "Soft lute reprise with distant wind chimes, starting mezzo-piano and fading to silence",
+      "duration": 10
+    }
+  ]
+}
