@@ -1,0 +1,85 @@
+{
+  "title": "Trailer - Echoes Through Time - Immersive Conversations With History’s Greatest Minds",
+  "description": "A 60-second, cinematic teaser for Echoes Through Time. Join Leo, our plucky time-traveler, as he previews weekly 40-minute interviews with history’s greatest minds—packed with immersive sound, verified facts, sharp humor, and dinner-worthy insights. Hit follow and start traveling.",
+  "historical_figure": "Trailer",
+  "time_period": "Various",
+  "location": "Various",
+  "intro": [
+    {
+      "speaker": "Narrator",
+      "text": "Gather close, dear traveler—this is Echoes Through Time, where every week young Leo leaps through centuries to share a fireside chat with the giants who shaped our world."
+    },
+    {
+      "speaker": "SFX",
+      "text": "low fireplace crackle at 40 % volume with distant solo violin phrase, gently ducking to 15 % under dialogue and fading after ten seconds",
+      "duration": 10
+    }
+  ],
+  "arrival_scene": [
+    {
+      "speaker": "SFX",
+      "text": "rising wind whoosh peaking at 70 % then cutting to silence, faint electric hum, soft shoe-thud on gravel, wind drops to 0 % within two seconds",
+      "duration": 6
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Through that swirling fog stumbles our wide-eyed time-traveller Leo—straight into history."
+    }
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Whoa. <break time=\"0.8s\"/>Time travel really never gets old! <break time=\"0.4s\"/>Napoleon? Is that really you?"
+    },
+    {
+      "speaker": "Napoleon",
+      "text": "I never won by chance, mon ami—every risk was carefully calculated."
+    },
+    {
+      "speaker": "SFX",
+      "text": "gentle time-shift sound with soft metallic shimmer, fading naturally",
+      "duration": 1
+    },
+    {
+      "speaker": "Marcus Aurelius",
+      "text": "Obice via est. The obstacle is the way, young traveler."
+    },
+    {
+      "speaker": "SFX",
+      "text": "subtle temporal transition with light chime-like quality, dissolving smoothly",
+      "duration": 1
+    },
+    {
+      "speaker": "Cleopatra",
+      "text": "Power, my dear, is pure theatre."
+    },
+    {
+      "speaker": "SFX",
+      "text": "delicate time-ripple effect with soft crystalline tones, gracefully dissipating",
+      "duration": 1
+    },
+    {
+      "speaker": "Charles Darwin",
+      "text": "Adapt—or vanish. Nature is not sentimental."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Episodes on Napoleon's Gambit, Cleopatra's Stagecraft, and Darwin's Survival Code are already waiting. New chats drop every Tuesday—just bring your curiosity."
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Narrator",
+      "text": "History's giants, one conversation at a time—discover the fascinating lives behind the legends."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Follow now—and journey with me through time as history's most fascinating figures share their stories in your feed each week."
+    },
+    {
+      "speaker": "SFX",
+      "text": "clock tick accelerating from 20 % to 60 %, merging into triumphant brass fanfare with military drums swelling to 80 % then fading to silence over three seconds",
+      "duration": 8
+    }
+  ]
+}

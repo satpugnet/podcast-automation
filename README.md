@@ -1,6 +1,6 @@
 # 🕰️ **Echoes Through Time Podcast**
 
-A fully automated podcast where an inquisitive Time Traveler named Leo meets humanity's most fascinating historical figures, blending authentic dialogue, compelling storytelling, and listener-driven exploration. Short, insightful episodes designed to bring history vividly to life.
+A fully automated podcast where an inquisitive Time Traveler named Leo meets humanity's most fascinating historical figures, blending authentic dialogue, compelling storytelling, and listener-driven exploration. Short, insightful episodes designed to bring history vividly to life. New episodes every Tuesday!
 
 ---
 
@@ -25,7 +25,7 @@ A fully automated podcast where an inquisitive Time Traveler named Leo meets hum
 
 ## 🎙️ **Podcast Structure**
 
-**Format (~20 mins episodes):**
+**Format (~20 mins episodes, released every Tuesday):**
 - **Intro (1 min)**: Quick hook, guest intro
 - **Arrival Scene (1-2 mins)**: Immersive audio to set historical context
 - **Conversation (15-18 mins)**: Engaging dialogue with historical figure
@@ -219,3 +219,4 @@ IMPORTANT: Format your response strictly as a JSON object with the following str
 - Hybrid voice acting for more emotional depth
 - Companion newsletter: *Time Traveler's Journal* for deeper insights and community-building
 - Every new episode, post on LinkedIn and Twitter with an announcement and a summary of the historical figure to build a habit for the audience about learning about historical figures
+- Tune in every Tuesday for new episodes featuring fascinating historical figures from across time

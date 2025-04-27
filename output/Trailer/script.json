@@ -1,0 +1,88 @@
+{
+  "title": "Trailer - Echoes Through Time - Immersive Conversations With History’s Greatest Minds",
+  "description": "60-second cinematic teaser. Meet Leo, a wide-eyed time-traveler who drops weekly 40-minute interviews with history’s greatest minds; immersive sound, rigorously fact-checked stories, sharp humor, and insights you’ll quote at dinner. Follow Echoes Through Time and start jumping centuries.",
+  "historical_figure": "Trailer",
+  "time_period": "Various",
+  "location": "Various",
+  "intro": [
+    {
+      "speaker": "Narrator",
+      "text": "Gather close, dear traveler! This is Echoes Through Time. Where every week young Leo leaps through centuries to share a fireside chat with the giants who shaped our world."
+    },
+    {
+      "speaker": "SFX",
+      "text": "fireplace crackle, gently fading",
+      "duration": 6
+    }
+  ],
+  "arrival_scene": [
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Whoa! Time travel really never gets old! <break time=\"0.4s\"/>Napoleon? Is that really you?"
+    },
+    {
+      "speaker": "Napoleon Bonaparte",
+      "text": "I never won by chance, mon ami. Every risk was carefully calculated."
+    },
+    {
+      "speaker": "SFX",
+      "text": "time ripple effect with soft crystalline tones, gracefully dissipating",
+      "duration": 2
+    },
+    {
+      "speaker": "Leo",
+      "text": "And now I'm with Marcus Aurelius, the great Roman Emperor and philosopher!"
+    },
+    {
+      "speaker": "Marcus Aurelius",
+      "text": "Obice via est. The obstacle is the way, young traveler."
+    },
+    {
+      "speaker": "SFX",
+      "text": "time ripple effect with soft crystalline tones, gracefully dissipating",
+      "duration": 2
+    },
+    {
+      "speaker": "Leo",
+      "text": "Queen Cleopatra! Your wisdom on leadership is legendary."
+    },
+    {
+      "speaker": "Cleopatra",
+      "text": "Power, my dear, <break time=\"0.4s\"/>is pure theatre."
+    },
+    {
+      "speaker": "SFX",
+      "text": "time ripple effect with soft crystalline tones, gracefully dissipating",
+      "duration": 2
+    },
+    {
+      "speaker": "Leo",
+      "text": "Charles Darwin! The father of evolutionary theory himself!"
+    },
+    {
+      "speaker": "Charles Darwin",
+      "text": "Adapt or vanish. <break time=\"0.4s\"/>Nature is not sentimental."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Conversations with Napoleon's strategic mind, Cleopatra's political theater, and Darwin's natural wisdom are already waiting! New journeys through time every Tuesday, just bring your curiosity!"
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Narrator",
+      "text": "History's giants one conversation at a time. Discover the fascinating lives behind the legends."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Follow now and journey with me through time as history's most fascinating figures share their stories in your feed each week!"
+    },
+    {
+      "speaker": "SFX",
+      "text": "clock slowly ticking gradually diminishing into silence",
+      "duration": 8
+    }
+  ]
+}
