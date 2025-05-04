@@ -2,6 +2,7 @@ import requests
 import os
 import json
 from dotenv import load_dotenv
+from datetime import datetime, timedelta
 
 load_dotenv()
 
@@ -51,7 +52,7 @@ def create_episode(title, audio_url, description, transcript_text, image_url=Non
     response.raise_for_status()
     return response.json()
 
-def publish_episode_status(episode_id, status="published"):
+def publish_episode_status(episode_id, status="published", published_at=None):
     """
     Publish, schedule, or unpublish an episode.
     
@@ -71,6 +72,11 @@ def publish_episode_status(episode_id, status="published"):
             "status": status
         }
     }
+    
+    # Add published_at if provided
+    if published_at:
+        episode_data["episode"]["published_at"] = published_at
+        print(f"Setting publication date to: {published_at}")
 
     print(f"Updating episode {episode_id} status to: {episode_data}")
     
@@ -79,8 +85,24 @@ def publish_episode_status(episode_id, status="published"):
     print(f"Episode status updated to {status}")
     return response.json()
 
+def get_next_tuesday_1am():
+    """
+    Returns the next Tuesday at 1:00 AM as a formatted string in EDT.
+    Format: "YYYY-MM-DD HH:MM:SS EDT"
+    """
+    now = datetime.now()
+    days_until_tuesday = (1 - now.weekday()) % 7  # 1 is Tuesday
+    if days_until_tuesday == 0 and now.hour >= 1:
+        days_until_tuesday = 7  # If it's already Tuesday after 1am, get next Tuesday
+    
+    next_tuesday = now + timedelta(days=days_until_tuesday)
+    next_tuesday = next_tuesday.replace(hour=1, minute=0, second=0, microsecond=0)
+    
+    return next_tuesday.strftime("%Y-%m-%d %H:%M:%S EDT")
+
 # Main flow
-def publish_episode(script_path, audio_path, transcript_path=None, image_path=None, publish_now=False):
+# published_at format is YYYY-MM-DD HH:MM:SS EDT (my podcast timezone)
+def publish_episode(script_path, audio_path, transcript_path=None, image_path=None, publish_status="draft", published_at=None):
     # Load the script to extract title and description
     with open(script_path, 'r', encoding='utf-8') as file:
         script = json.load(file)
@@ -117,12 +139,18 @@ def publish_episode(script_path, audio_path, transcript_path=None, image_path=No
     print("Episode created:", json.dumps(episode, indent=2))
     
     # Publish the episode if requested
-    if publish_now:
-        episode_id = episode["data"]["id"]
-        status = "published"
+    episode_id = episode["data"]["id"]
+    if publish_status == "published":
         print(f"Publishing episode {episode_id}...")
-        publish_result = publish_episode_status(episode_id, status)
+        publish_result = publish_episode_status(episode_id, "published")
         print("Episode published:", json.dumps(publish_result, indent=2))
+    elif publish_status == "scheduled":
+        # Use provided published_at or default to next Tuesday at 1am
+        if not published_at:
+            published_at = get_next_tuesday_1am()
+        print(f"Scheduling episode {episode_id} for {published_at}...")
+        publish_result = publish_episode_status(episode_id, "scheduled", published_at)
+        print("Episode scheduled:", json.dumps(publish_result, indent=2))
     
     return episode
 
@@ -132,21 +160,23 @@ if __name__ == "__main__":
     print("Running publication module directly")
     
     if len(sys.argv) < 3:
-        print("Usage: python publication.py <script_path> <audio_path> <transcript_path> [image_path] [publish_now]")
+        print("Usage: python publication.py <script_path> <audio_path> <transcript_path> [image_path] [publish_status] [published_at]")
         sys.exit(1)
     
     script_path = sys.argv[1]
     audio_path = sys.argv[2]
     transcript_path = sys.argv[3]
     image_path = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != "None" else None
-    publish_now = True if len(sys.argv) > 5 and sys.argv[5].lower() in ["true", "yes", "y", "1"] else False
+    publish_status = sys.argv[5] if len(sys.argv) > 5 else "draft"
+    published_at = sys.argv[6] if len(sys.argv) > 6 else None
     
     result = publish_episode(
         script_path=script_path,
         audio_path=audio_path,
         transcript_path=transcript_path,
         image_path=image_path,
-        publish_now=publish_now
+        publish_status=publish_status,
+        published_at=published_at
     )
     
     print(f"Publication process completed. Result: {json.dumps(result, indent=2)}")

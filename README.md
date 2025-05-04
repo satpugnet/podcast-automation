@@ -109,24 +109,29 @@ Historical Figure:
 [Insert Historical Figure Name Here]
 
 ### **Prompt for LLM Episode Script Generation**
-Create a richly detailed, engaging, and immersive podcast script (~20 minutes) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
+Create a richly detailed, engaging, and immersive podcast script (~40 minutes/6000-6500 words) for the podcast "Echoes Through Time" featuring Leo, a young, curious, empathetic, and thoughtful Time Traveler with an innocent and somewhat naive perspective, engaging in a dynamic, conversational interaction with a notable historical figure. The dialogue should flow naturally, with seamless transitions from lighter, intriguing topics into deeper, introspective discussions. Ensure historical accuracy blended creatively with speculative insights, providing a vivid portrayal of the historical figure's life, personality, motivations, struggles, achievements, and broader impact on history.
+
+This is a pedagogical educational podcast designed for a general audience. The content should be accessible, engaging, and informative for listeners of various backgrounds and knowledge levels. The goal is to make the audience learn about the historical figure and their life in a compelling way.
 
 Detailed Structure:
 
-1. Intro (1 min):
+1. Intro (1-2 mins):
    - Begin with an intriguing narrative hook or fascinating anecdote that captures listeners' curiosity immediately.
    - Briefly introduce the historical figure, emphasizing why their story resonates today.
+   - Clearly establish the time period and location for the listener's orientation.
 
-2. Arrival Scene (1-2 mins):
+2. Arrival Scene (2-3 mins):
    - Set a vivid, immersive scene rich in sensory detail (visuals, sounds, atmosphere) that transports listeners directly into the historical context.
    - Depict Leo's gentle and believable arrival into the setting, smoothly transitioning into the first interaction without abruptness.
+   - Explicitly mention the specific location, date, and relevant historical context to ground the audience.
 
-3. Conversation (15-18 mins):
+3. Conversation (32-35 mins):
    - Open the dialogue casually, establishing rapport gently and naturally before gradually deepening the discussion.
    - Avoid overly sharp or direct initial questions. Start with friendly or intriguing points of mutual interest, setting a comfortable conversational tone.
    - Gradually progress into key life events, personal anecdotes, emotional challenges, notable achievements, and formative experiences of the historical figure.
    - Encourage genuine, spontaneous exchanges and organic emotional depth, allowing for introspection, humor, and meaningful reflection.
    - Integrate historical context naturally within dialogue, enhancing listener understanding without interrupting conversational flow.
+   - Have characters occasionally reference the specific time period, location, or historical events to help orient the audience throughout the conversation.
    - Maintain dynamic exchanges, alternating seamlessly between curiosity-driven inquiries from Leo and detailed storytelling by the historical figure.
    - Occasionally, the Narrator may briefly interject to provide context, transitions, or to highlight significant moments. These should be rare and purposeful.
    - The setting can occasionally change as characters move through space or time naturally and meaningfully.
@@ -147,20 +152,28 @@ Detailed Structure:
    - Include at least 50 exchanges between Leo and the historical figure for depth and comprehensive coverage.
    - Vary exchange lengths naturally:
       * Brief, snappy exchanges for lighter moments or quick clarifications.
-      * Allow frequent opportunities for the historical figure to give extended, detailed responses (averaging 150-300 words), especially when sharing personal stories, explaining complex ideas, or discussing significant events.
-      * Give the historical figure space for occasional extended monologues (1-3 minutes) to deeply reflect or passionately explain important topics.
+      * Allow frequent opportunities for the historical figure to give extended, detailed responses, especially when sharing personal stories, explaining complex ideas, or discussing significant events.
+      * Give the historical figure space for more extended monologues (of a few minutes) to deeply reflect or passionately explain important topics.
       * Ensure Leo's questions range from short, spontaneous reactions to more thoughtful inquiries.
-      * Maintain a conversational rhythm that ebbs and flows naturally.
+      * Maintain a conversational rhythm that ebbs and flows naturally. It should not be just back to back questions and answers.
+   - IMPORTANT: Model the conversation after professional interview podcasts where the host (Leo) guides the guest (historical figure) into sharing expansively about themselves and their world. Leo should:
+      * Ask open-ended questions that invite detailed responses
+      * Follow up on interesting points to draw out more information
+      * Provide gentle prompts that encourage the historical figure to elaborate
+      * Create a safe space for the historical figure to share personal insights and reflections
+      * Use active listening techniques to show engagement and encourage deeper sharing
+      * Occasionally summarize or reflect on what's been shared before moving to a new topic
    - IMPORTANT: Explicitly ensure that most of the historical figure's responses are expansive, detailed, and richly informative. Avoid consistently short or superficial answers; instead, actively encourage the historical figure to delve deeply into their thoughts, motivations, and experiences.
+   - Occasionally include words or expressions in the historical figure's original language where it makes sense for realism and immersion, followed by subtle translations or contextual clues for understanding.
 
-4. Outro (1 min):
+4. Outro (1-2 mins):
    - Concisely summarize key insights from the conversation.
    - Share an inspiring or thought-provoking takeaway.
 
 Tone: Warm, conversational, intellectually engaging, empathetic, subtly humorous, reflective, approachable, and authentic.
 
 Characterization:
-- Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity often leading to humorous moments. His earnestness and occasional out-of-place modern references should create natural comedy that lightens the conversation.
+- Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity often leading to humorous moments. His earnestness and occasional out-of-place modern references should create natural comedy that lightens the conversation. As a time traveler from the modern era, Leo should occasionally make anachronistic references or comparisons (like mentioning smartphones, social media, modern pop culture, etc.) that would be completely unknown to the historical figure, creating humorous moments of confusion or opportunities for Leo to explain modern concepts.
 - Narrator: An old, wise, warm and friendly grandpa figure with a calm authority and welcoming presence. His humor should be tailored to complement the historical figure being interviewed, with gentle wit and occasional playful references that would resonate with both the historical period and modern listeners. His eloquence is concise yet polished, intellectually accessible, and delivered with grandfatherly charm that makes complex historical contexts feel like familiar stories told around a fireplace.
 - Historical Figure: Should speak authentically to their character and time period, with all their complexities, flaws, and contradictions intact. Do NOT present an idealized version of the historical figure. Instead, portray them as closely as possible to their actual personality, including their biases, shortcomings, and controversial aspects. Their responses should be substantive and detailed, offering rich insights into their life, work, and era, while remaining true to their known character traits, beliefs, and attitudes. They should express views consistent with their time period and personal philosophy, even when these might be uncomfortable or controversial by modern standards. Their responses should be thorough and thoughtful, demonstrating their perspective without sanitizing or modernizing their worldview.
 
@@ -181,33 +194,37 @@ Sound Effects (SFX):
 - Avoid generic or vague descriptions that would be difficult to generate accurately.
 - Always include an indication of the sound's duration (in seconds) and volume progression (starting soft/loud and how it changes) to guide the AI sound generation system.
 
+Note: You can include <break time="x.xs" /> tags in the text to specify pauses in character speech (e.g., "I never expected that. <break time="1.5s" /> How fascinating.").
+
+Deliver a story that grips listeners in the first 30 seconds and sustains their curiosity to the end.
+Balance vivid scene-setting with rigorous historical accuracy; clarify any debated points in-dialogue.
+
 IMPORTANT: Format your response strictly as a JSON object with the following structure, ONLY THE JSON, NO markdown or syntax highlighting:
 {
-    "title": "Episode title", // Just put the name of the historical figure
-    "description": "Brief podcast episode description for publication",
-    "historical_figure": "Name of the historical figure",
-    "time_period": "Time period of the conversation",
-    "location": "Location of the conversation",
-    "intro": [ // Usually only the Narrator/SFX speaks in the intro
-        {"speaker": "SFX", "text": "...", "duration": x},
-        {"speaker": "Narrator", "text": "..."}, 
-        {"speaker": "SFX", "text": "...", "duration": x}
-    ],
-    "arrival_scene": [ // Usually only the Narrator/SFX speaks in the arrival scene
-        {"speaker": "Narrator", "text": "..."}, 
-        {"speaker": "SFX", "text": "...", "duration": x},
-    ],
-    "conversation": [
-        {"speaker": "Leo", "text": "..."}, 
-        {"speaker": "Historical Figure", "text": "..."}, // "Historical Figure" should be replaced by the name of the historical figure
-        {"speaker": "Narrator", "text": "..."}, 
-        {"speaker": "SFX", "text": "...", "duration": x}
-    ],
-    "outro": [ // Usually only the Narrator/SFX speaks in the outro
-        {"speaker": "Leo", "text": "..."}, 
-        {"speaker": "Narrator", "text": "..."}, 
-        {"speaker": "SFX", "text": "...", "duration": x}
-    ]
+   "title": "Episode title", // Make it SEO friendly and follow the format "<Name of historical figure> - <one line hook / payoff>"
+   "description": "Brief podcast episode description for publication",
+   "historical_figure": "Name of the historical figure",
+   "time_period": "Time period of the conversation",
+   "location": "Location of the conversation",
+   "intro": [ // Usually only the Narrator/SFX speaks in the intro
+      {"speaker": "Narrator", "text": "..."}, 
+      {"speaker": "SFX", "text": "...", "duration": x}
+   ],
+   "arrival_scene": [ // Usually only the Narrator/SFX speaks in the arrival scene
+      {"speaker": "Narrator", "text": "..."}, 
+      {"speaker": "SFX", "text": "...", "duration": x},
+   ],
+   "conversation": [
+      {"speaker": "Leo", "text": "..."}, 
+      {"speaker": "Historical Figure", "text": "..."}, // "Historical Figure" should be replaced by the name of the historical figure
+      {"speaker": "Narrator", "text": "..."}, 
+      {"speaker": "SFX", "text": "...", "duration": x}
+   ],
+   "outro": [
+      {"speaker": "Leo", "text": "..."}, 
+      {"speaker": "Narrator", "text": "..."}, 
+      {"speaker": "SFX", "text": "...", "duration": x}
+   ]
 }
 
 ---

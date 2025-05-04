@@ -118,14 +118,14 @@ def main():
     guest_voice_id = args.guest_voice_id
     voice_file_path = None
     if not guest_voice_id:
-        if input("🎙️ Generate character voice? (press y for yes, any other key for no): ").lower().strip() in ["yes", "y"]:
+        if input("🎙️ Generate character voice? (press y for yes, press Enter for no): ").lower().strip() in ["yes", "y"]:
             print(f"🔄 Generating voice for {character_name}...")
             guest_voice_id, voice_file_path = voice_design.generate_voice(character_name=character_name)
             print(f"✅ Voice generated successfully! Voice ID: {guest_voice_id}")
         else:
             print("⏭️ Voice generation skipped.")
-            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure (press 'd' for default): ")
-            if guest_voice_id.lower() == 'd':
+            guest_voice_id = input("🗣️ No voice ID found. Please enter the voice ID for the historical figure (press Enter for default): ")
+            if guest_voice_id.strip() == '':
                 voice_id_file_path = f"{current_episode_folder_path}/voice_id.json"
                 with open(voice_id_file_path, 'r') as file:
                     guest_voice_id = json.load(file)["voice_id"]
@@ -190,11 +190,13 @@ def main():
     image_path = input("🖼️ Enter the path to the episode image (optional, press Enter to skip): ")
     image_path = image_path if image_path else None
     
-    publish_option = input("⏱️ Choose publication option - publish now (p), save as draft (d), or skip (any other key): ").lower().strip()
-    publish_now = publish_option == "p"
-    save_as_draft = publish_option == "d"
-    
-    if not (publish_now or save_as_draft):
+    publish_option = input("⏱️ Choose publication option - publish now (p), save as draft (d), schedule (s) or skip (any other key): ").lower().strip()
+    publish_status = "published" if publish_option == "p" else "draft" if publish_option == "d" else "scheduled" if publish_option == "s" else None
+    published_at = None
+    if publish_status == "scheduled":
+        published_at = input("🗓️ Enter the publication date (YYYY-MM-DD HH:MM:SS EDT (or press Enter for next Tuesday at 1am)): ")
+
+    if not publish_status:
         print("⏭️ Episode publication skipped.")
         return
     
@@ -204,7 +206,8 @@ def main():
         audio_path=audio_path,
         transcript_path=transcript_path,
         image_path=image_path,
-        publish_now=publish_now
+        publish_status=publish_status,
+        published_at=published_at
     )
     print(f"🎉 Episode '{script_data['title']}' published successfully!")
 

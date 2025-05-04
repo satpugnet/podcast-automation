@@ -6,6 +6,36 @@ from pathlib import Path
 from pydub import AudioSegment
 from elevenlabs.client import ElevenLabs
 from dotenv import load_dotenv
+import numpy as np
+
+# Constants for audio processing
+# Sound effect fade durations (percentages of total duration)
+SFX_FADE_IN_PERCENT = 0.2
+SFX_FADE_OUT_PERCENT = 0.25
+SFX_MIN_FADE_IN_MS = 500
+SFX_MAX_FADE_IN_MS = 3000
+SFX_MIN_FADE_OUT_MS = 750
+SFX_MAX_FADE_OUT_MS = 4000
+
+# Speech fade durations (in milliseconds)
+SPEECH_FADE_IN_MS = 300
+SPEECH_FADE_OUT_MS = 500
+
+# Pause durations (in milliseconds)
+# For SFX bumper pauses
+BUMPER_PAUSE_MEAN_MS = 1150
+BUMPER_PAUSE_STD_MS = 75
+BUMPER_PAUSE_MIN_MS = 800
+BUMPER_PAUSE_MAX_MS = 1100
+
+# For speech pauses
+SPEECH_PAUSE_LOGNORMAL_MEAN = np.log(0.22)
+SPEECH_PAUSE_LOGNORMAL_SIGMA = 0.9
+SPEECH_PAUSE_MIN_MS = 300
+SPEECH_PAUSE_MAX_MS = 900
+
+# Default SFX duration if not specified
+DEFAULT_SFX_DURATION = 5.0
 
 def generate_sound_effect(text: str, duration_seconds: float, output_path: str):
     """
@@ -90,14 +120,14 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
                 if os.path.exists(sfx_path):
                     print(f"Using existing sound effect: {sfx_path}")
                 else:
-                    duration = float(item.get("duration", 5.0))  # Default to 5 seconds if not specified
+                    duration = float(item.get("duration", DEFAULT_SFX_DURATION))
                     generate_sound_effect(item["text"], duration, sfx_path)
                     
                     # Avoid rate limiting only if we generated a new sound effect
                     time.sleep(0.5)
                 
                 segment_paths.append(sfx_path)
-                sfx_durations[sfx_path] = float(item.get("duration", 5.0))  # Store the duration for later use
+                sfx_durations[sfx_path] = float(item.get("duration", DEFAULT_SFX_DURATION))  # Store the duration for later use
             else:
                 # Generate speech
                 voice_id = voice_ids.get(item["speaker"], voice_ids["Narrator"])
@@ -130,10 +160,7 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     # Combine all audio segments
     print("Combining all audio segments...")
     combined = AudioSegment.empty()
-    
-    # Add a short pause between segments (1500ms silence)
-    pause = AudioSegment.silent(duration=1200)
-    
+
     for i, path in enumerate(segment_paths):
         segment = AudioSegment.from_file(path)
         
@@ -141,19 +168,30 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
         if "sfx" in path:
             # Calculate fade durations based on the SFX duration
             duration = sfx_durations.get(path)
-            # Use 20% of the duration for fade in and 25% for fade out, with minimums
-            # Calculate fade durations based on the SFX duration, with minimums and maximums
-            fade_in_duration = max(min(int(duration * 1000 * 0.2), 3000), 500)  # At least 500ms, at most 3s
-            fade_out_duration = max(min(int(duration * 1000 * 0.25), 4000), 750)  # At least 750ms, at most 4s
+            # Use defined percentages of the duration for fade in and out, with minimums and maximums
+            fade_in_duration = max(min(int(duration * 1000 * SFX_FADE_IN_PERCENT), SFX_MAX_FADE_IN_MS), SFX_MIN_FADE_IN_MS)
+            fade_out_duration = max(min(int(duration * 1000 * SFX_FADE_OUT_PERCENT), SFX_MAX_FADE_OUT_MS), SFX_MIN_FADE_OUT_MS)
             segment = segment.fade_in(fade_in_duration).fade_out(fade_out_duration)
         else:
             # Apply subtle fades for speech to sound more natural
-            segment = segment.fade_in(300).fade_out(500)
+            segment = segment.fade_in(SPEECH_FADE_IN_MS).fade_out(SPEECH_FADE_OUT_MS)
         
         combined += segment
         
         # Add pause after each segment except the last one
         if i < len(segment_paths) - 1:
+            rng = np.random.default_rng()
+            # Determine pause duration based on next segment type
+            if "sfx" in segment_paths[i+1]:
+                # bumper pause: use normal distribution with defined parameters
+                pause_duration = int(rng.normal(BUMPER_PAUSE_MEAN_MS, BUMPER_PAUSE_STD_MS))
+                pause_duration = max(BUMPER_PAUSE_MIN_MS, min(pause_duration, BUMPER_PAUSE_MAX_MS))
+            else:
+                # Speech pause: log-normal distribution for more natural timing
+                dur = rng.lognormal(mean=SPEECH_PAUSE_LOGNORMAL_MEAN, sigma=SPEECH_PAUSE_LOGNORMAL_SIGMA) * 1000
+                pause_duration = int(max(SPEECH_PAUSE_MIN_MS, min(dur, SPEECH_PAUSE_MAX_MS)))
+            
+            pause = AudioSegment.silent(duration=pause_duration)
             combined += pause
     
     # Save the combined audio
