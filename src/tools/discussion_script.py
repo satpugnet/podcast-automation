@@ -92,7 +92,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     Tone: Warm, conversational, intellectually engaging, empathetic, subtly humorous, reflective, approachable, and authentic.
 
     Characterization:
-    - Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity often leading to humorous moments. His earnestness and occasional out-of-place modern references should create natural comedy that lightens the conversation. As a time traveler from the modern era, Leo should occasionally make anachronistic references or comparisons (like mentioning smartphones, social media, modern pop culture, etc.) that would be completely unknown to the historical figure, creating humorous moments of confusion or opportunities for Leo to explain modern concepts. Don't make him woke or too cringe.
+    - Leo (Time Traveler): Young, innocent, and somewhat naive, with a deep curiosity and wide-eyed wonder about history. His youth and innocence should come through in his questions and reactions, sometimes showing endearing naivety about historical complexities. He's an empathetic listener, intellectually humble, warmly humorous, adaptable conversationalist, and reflective. Leo should be genuinely funny in an unintentional way, with his high energy, innocent misunderstandings, and enthusiastic curiosity leading to humorous moments. His occasional anachronistic references to modern concepts create natural comedy without overplaying his naivety. Leo should maintain appropriate maturity for the historical context while still embodying youthful curiosity. Don't make him too woke, too cringe, too childish or too goofy.
     - Narrator: An old, wise, warm and friendly grandpa figure with a calm authority and welcoming presence. His humor should be tailored to complement the historical figure being interviewed, with gentle wit and occasional playful references that would resonate with both the historical period and modern listeners. His eloquence is concise yet polished, intellectually accessible, and delivered with grandfatherly charm that makes complex historical contexts feel like familiar stories told around a fireplace.
     - Historical Figure: Should speak authentically to their character and time period, with all their complexities, flaws, and contradictions intact. Do NOT present an idealized version of the historical figure. Instead, portray them as closely as possible to their actual personality, including their biases, shortcomings, and controversial aspects. Their responses should be substantive and detailed, offering rich insights into their life, work, and era, while remaining true to their known character traits, beliefs, and attitudes. They should express views consistent with their time period and personal philosophy, even when these might be uncomfortable or controversial by modern standards. Their responses should be thorough and thoughtful, demonstrating their perspective without sanitizing or modernizing their worldview.
 
@@ -114,6 +114,8 @@ def generate_podcast_script(historical_figure, background_research=None, script_
     - Always include an indication of the sound's duration (in seconds) and volume progression (starting soft/loud and how it changes) to guide the AI sound generation system.
 
     Note: You can include <break time="x.xs" /> tags in the text to specify pauses in character speech (e.g., "I never expected that. <break time="1.5s" /> How fascinating.").
+
+    IMPORTANT: Avoid parenthetical stage directions or emotional cues in dialogue. Instead, convey emotion and tone naturally through word choice and phrasing, as the audio format doesn't support these annotations.
 
     Deliver a story that grips listeners in the first 30 seconds and sustains their curiosity to the end.
     Balance vivid scene-setting with rigorous historical accuracy; clarify any debated points in-dialogue.
@@ -160,7 +162,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
 
     # Copy the prompt to clipboard
     pyperclip.copy(f"{system_prompt}\n\n{user_prompt}")
-    print("System prompt and user prompt copied to clipboard!")
+    print("\nSystem prompt and user prompt copied to clipboard! 📋")
     
     # Make the initial API call
     try:
@@ -219,7 +221,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
                 feedback_template = file.read()
                 formatted_feedback_template = feedback_template.format(script=script_json)
                 pyperclip.copy(formatted_feedback_template)
-                print("Feedback prompt copied to clipboard!")
+                print("\nFeedback prompt copied to clipboard! 📋")
 
             # Ask for feedback
             user_feedback = input("\nWould you like to provide feedback to improve the script? (leave empty to proceed with current script): ").strip()
