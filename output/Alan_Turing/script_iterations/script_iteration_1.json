@@ -1,5 +1,5 @@
 {
-  "title": "Alan Turing - The Genius Who Taught Machines to Think (and Ran Past the Geniuses That Couldn't)",
+  "title": "Alan Turing - The Man Who Taught Machines to Think",
   "description": "Echoes Through Time travels to Bletchley Park for a revealing, heartfelt conversation between time traveler Leo and Alan Turing - mathematician, codebreaker, and father of computer science. Discover Turing's quirks, brilliance, struggles, and enduring impact on the digital world and social justice.",
   "historical_figure": "Alan Turing",
   "time_period": "late 1945 - postwar Britain, after Turing's AI research and before his arrest",
@@ -29,7 +29,7 @@
   "conversation": [
     {
       "speaker": "Leo",
-      "text": "Whoa. This is—gosh!—like stepping into a brain dressed up as a laboratory. Oh, sorry, I didn't mean to stare. Are you, um… Alan Turing?"
+      "text": "Wow... this is like stepping into a brain dressed up as a laboratory. Oh, sorry, I didn't mean to stare. Are you, um… <break time=\"1s\"/> Alan Turing?"
     },
     {
       "speaker": "Alan Turing",
