@@ -8,7 +8,6 @@ Ibn Battuta
 Yuri Gagarin
 Hypatia of Alexandria
 Socrates
-Genghis Khan
 Joan of Arc
 Leonardo da Vinci
 Isaac Newton

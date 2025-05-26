@@ -11,3 +11,6 @@
 
 # Song
 - Use https://suno.com/ to generate song
+
+# Audio
+- Add little delay between character and the narrator in echoes through time

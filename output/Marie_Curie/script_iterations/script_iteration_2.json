@@ -1,0 +1,426 @@
+{
+  "title": "Marie Curie – Illuminating Science: The Radiance, Sacrifice, and Humanity of a True Pioneer",
+  "description": "Time traveler Leo journeys to the heart of 1911 Paris to meet Marie Curie at her laboratory. Together, they explore Curie’s struggles, discoveries, resilience in the face of scandal, and unwavering commitment to knowledge and humanity. A vivid portrait of a woman who changed science forever—and who never lost her compassion or her roots.",
+  "historical_figure": "Marie Curie",
+  "time_period": "1911",
+  "location": "Paris, France – Curie’s laboratory, Paris streets, and Curie’s modest home",
+  "intro": [
+    {
+      "speaker": "SFX",
+      "text": "Melancholic violin melody with soft piano, joined by swelling strings and subtle ticking clock, starting gently, rising in volume, then fading, lasting 28 seconds.",
+      "duration": 28
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Imagine a silent Parisian lab, windows glowing with blue-green light that seems neither of sky nor fire but forged from the hidden heart of the atom. Here, in this humble laboratory—one step from the street and another from history—a woman stands alone against tradition, poverty, grief, and prejudice. Her name is Marie Curie, and her brilliance, like the radium she discovered, outshines the darkness of her century."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Welcome to Echoes Through Time, where history’s turning points come alive with warmth and candor. I am your host, the ever-spirited grandpa Narrator, inviting you to join our wonderstruck young time traveler, Leo. Tonight, we travel to 1911’s Paris. Behind these lab doors, we meet not just a legend but a mother, a patriot, and a scientist driven by an insatiable hunger for understanding."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Why does Curie’s story still resonate—across classrooms, laboratories, and kitchen tables alike? Because she reminds us that breakthroughs are built not simply by intellect, but by endurance, sacrifice, and the refusal to surrender to fear. Against odds that would daunt most, Curie rewrote what humanity can know—and who is allowed to know it. <break time=\"1.0s\" /> Let’s step into her Paris and listen to the woman for whom even the impossible was not to be dreaded, but to be understood."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Rain pattering on Paris rooftops, growing from soft to steady, punctuated by distant horse hooves and wagons, then a church bell tolling 8 p.m., with the muted hum of electricity flickering in as rain quietly fades, 18 seconds.",
+      "duration": 18
+    }
+  ],
+  "arrival_scene": [
+    {
+      "speaker": "Narrator",
+      "text": "It is a chilly October evening in the Latin Quarter, 1911. Mist hugs the gaslamps along Rue d’Ulm; somewhere, a flower-seller’s song drifts up from the boulevard. Atop slick cobblestones, Leo, our unsuspecting guest from the future, materializes with a startled look and shoes already soaked through."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Footsteps landing in shallow puddles, water splashing, hurried breathing, followed by the nearby roll of wagon wheels and the faint hiss of a gas lamp being lit, gradually decreasing as Leo approaches a heavy wooden door, 14 seconds.",
+      "duration": 14
+    },
+    {
+      "speaker": "Narrator",
+      "text": "The laboratory is unimposing—a once-forgotten medical storeroom, now the epicenter of discoveries that electrify the world. Damp coats and worn boots hang near the entrance; chemical scents mingle with ozone. At a battered workbench, she stands: Marie Curie, her posture upright, her eyes alert yet warily guarded, subtly illuminated by that improbable blue gleam."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Lab ambience: low hum of electrical equipment, soft bubbling from glass flasks, and the faint crackle of a Bunsen burner igniting, lasting 12 seconds.",
+      "duration": 12
+    }
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Bonsoir, Madame Curie. I… hope you don’t mind an unexpected visitor. Your laboratory—it feels almost like something between an alchemist’s den and a magician’s stage."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Bonsoir. If you are a magician, please conjure up a little more space and modern ventilation. As for alchemy, that is history—we seek understanding, not gold."
+    },
+    {
+      "speaker": "Leo",
+      "text": "If only, right? Although, in my time, I think your radium is worth more than gold anyway. Is that it—the blue glow in the glass vial there?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Yes, radium chloride. We have only tiny amounts. Its radioactivity is so intense that it glows in darkness—an effect that never fails to startle visitors. Please, do not touch anything. The beauty of radium hides a danger we do not yet fully understand."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I did hear you used to carry samples in your pocket. Wasn’t that, well… I don’t want to say reckless, but…"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was simply ignorance, not bravado. There is a tendency among scientists to become enchanted by discovery and blind to hazard. I do not recommend such carelessness; indeed, today I take every precaution we know. But the unknown is, by definition, unclear. If we waited for perfect understanding, no great step would ever be taken."
+    },
+    {
+      "speaker": "Leo",
+      "text": "That’s rather profound. I’m often scared of things I don’t understand—and I can’t say my school science was as intimidating as these bottles marked 'danger' in chalk."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Fear can be useful, when it breeds caution. But do not let it paralyze you. I have always believed: 'Dans la vie, rien n’est à craindre, tout est à comprendre.' In life, nothing is to be feared, everything is to be understood."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Is that your motto—for science, or for life?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "For both. It was as true in partitioned Poland as it is in Parisian laboratories. In my youth, simply speaking Polish at school could mean trouble for one’s family. Knowledge was forbidden to many. We learned early to value understanding above all—sometimes as a question of survival."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did that shape you? Your parents were both teachers during the Russian occupation, facing all those restrictions. Did their example inspire you to see education as almost, well, a form of rebellion?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "My father, Władysław, taught me science with makeshift instruments after he lost his post for 'unpatriotic sympathies.' My mother, Bronisława, was a headmistress, unyielding in demanding education for her daughters as well as her sons. After she died—I was only ten—my ambition became even more vital… a tribute to her, perhaps. And yes, in Warsaw, learning was resistance."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I read about your time at the 'Flying University.' What was it like, slipping through alleys with books hidden in your dress? It sounds thrilling—and dangerous."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was equal parts hope and fear. We had to trust each other completely. To attend a lecture in Polish literature or advanced science, we gathered quietly at different apartments each week. Sometimes, the lectures would move if rumors came of police inspections. It was, I suppose, a conspiracy—but a noble one."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Could you feel, even then, that you were part of history in the making? Or did you just wish for a normal university?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I wished only for the right to study. History is not always romantic while it is lived. Often, it is a series of denials—of security, of comfort, of normalcy. But adversity teaches resourcefulness. Later, as I isolated radium in miserable conditions, I remembered the resourcefulness of those years."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You made a pact with your sister—you’d work as a governess to support her medical studies in Paris, and she’d return the favor. What was that chapter like?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I worked as a governess for a wealthy family in the Polish countryside. It was lonely, often humiliating. I fell in love with the family’s son—Kazimierz Żorawski—but his parents rejected any thought of marriage. It was my first bitter lesson in society’s limits. Yet in my spare hours, I taught myself science and even taught peasants’ children to read. The authorities frowned on such things, but I was not deterred."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your sense of mission is… relentless. When you think back, do you think loss—your mother, your sister—made you more determined?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Perhaps. Suffering can make one bitter, or it can inspire a quiet determination. I chose the latter. The world did not make it easy—especially not for a Polish girl. But my pain was never wasted; it hardened my resolve."
+    },
+    {
+      "speaker": "Leo",
+      "text": "In 1891, at 24, you moved to Paris. Could you share that experience—what was it like to become 'Marie' at the Sorbonne?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was a rebirth, in a sense. I arrived with barely enough money for two years, forced to live on bread, fruit, and tea, in a freezing attic. At night, I studied by the window to catch a little more light. The lectures at the Sorbonne thrilled me; the freedom was intoxicating. I came first in my degree in physics, second in mathematics. But it was lonely—few women, almost no Poles, and poverty was constant."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you ever consider going back to Poland then, after your degrees?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I did. I returned that summer, 1894, hoping to secure a position at Kraków University. But I was flatly refused for being a woman. Only then did I decide to stay in France. That rejection, though painful, set the course for my scientific life."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Low, evocative piano notes blended with sounds of chalk on blackboard, swirl of a cloak, deep sigh, and distant rain against a window, fading over 11 seconds.",
+      "duration": 11
+    },
+    {
+      "speaker": "Leo",
+      "text": "Enter Pierre Curie! You were introduced by Professor Kowalski, if I remember correctly. Was it, you know, instant chemistry?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Pierre had a peculiar charm—modest, almost awkward, but with a mind tuned to the frequencies of my own. Our first conversation lasted hours, not just about science, but about ideals—humane dreams, the improvement of society, the possibility of contributing something lasting. He was already an accomplished physicist, known for work on magnetism and crystals. But together, it was as if possibilities multiplied."
+    },
+    {
+      "speaker": "Leo",
+      "text": "He once wrote you—‘It would be a beautiful thing… hypnotized by our dreams: your dream for your country; our dream for humanity; our dream for science…’ You must have known then that you’d met your match."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Those words touched me deeply. I had always thought of myself as destined for a solitary path. Pierre’s sincerity—his willingness to share a life of poverty and science—persuaded me to remain in Paris. My dreams became our dreams."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your wedding—no gown or gold, just a blue dress for the lab and a pair of bicycles for a honeymoon. Did you ever wish you’d chosen comfort over science?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Never. For us, simplicity was freedom. Even in those first years, every spare franc went to laboratory needs, not to finery. Our labor together, whether in laboratories or on bicycles, was our fulfillment. Our apartment—a narrow space with irregular heating—was warmed by shared purpose."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Soon you’re tackling the mysteries of uranium rays — Henri Becquerel’s discovery. Why did that puzzle interest you above all others?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was a new phenomenon, unexplained by existing theory. The ‘uranium rays’ fogged photographic plates—what did that mean for the nature of matter? Using Pierre’s electrometer, I systematically measured the activity of uranium compounds. My curiosity grew as I realized this property was intrinsic to atoms, not just to molecules or chemical states. I called it 'radioactivity.' That concept—that energy comes directly from atoms—would change the world."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did you discover polonium and radium? Was it method or luck—or both?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Both, as always. I noticed that pitchblende, a uranium ore, was much more 'active' than pure uranium. That meant it contained something else—something even more radioactive. Through months of chemical separation, followed by baking, filtering, and measuring, we isolated a substance with novel properties: polonium, named for Poland. Radium followed, its radioactivity hundreds of times stronger. It was an exhausting process—tonnes of ore, cauldrons bigger than myself."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you realize the dangers of the work? The burns, the fatigue—did you have any idea?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "No, or not beyond what we thought minor discomforts. Aches, the occasional wound. I sometimes wore bandages, but we attributed it to harsh chemicals. Only later did we suspect the true risks of radiation. Our ignorance was profound—and costly."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You exposed phenomena that became the foundation for nuclear medicine—and nuclear weapons. Did that ever trouble your conscience?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Science is neither good nor evil, monsieur; it is for humankind to decide the uses. My heart is with the suffering—those who might be cured with radium therapy, as we hope. Weapons and destruction were not my purpose—and yet, I must accept that knowledge has unpredictable consequences."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Radium transformed medicine—especially cancer treatment—as well as revealing the power of the atom itself. Later, scientists would use these discoveries for both healing and harm."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "If I regret anything, it is that scientific marvels too easily seduce governments into pursuit of destruction, not cure. Even so, I believe hope and compassion must prevail."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s talk about recognition. When you earned your doctorate in 1903—first woman in France!—and then your first Nobel Prize in physics… how did that make you feel? Did it change anything in your daily life?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was pleasing, but also strange. I was glad that Pierre and I could share the award, especially after the committee initially overlooked my role. But we were still teachers, parents, experimenters. The world’s applause did not make the laboratory less cold or the ore less heavy."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I’d like to fast-forward a bit. In 1906, Pierre’s untimely death—how did you survive that loss? Where did you find your strength?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "At first I did not survive, not truly. For months, I existed only for routine: caring for my daughters, finishing Pierre’s work, keeping his lectures alive. My grief was private—I wrote to him in a journal as if he were still present. Accepting his position at the Sorbonne gave me a structure, a purpose, when nothing else did."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Do you remember that first lecture—facing a hall that expected, perhaps, to see you weep?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I remember my voice shaking. To begin, I read the very sentence Pierre had left unfinished in his last lesson. It was my way of honoring our shared labor. The room was silent, but I sensed both skepticism and curiosity. I continued because the work must continue."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did students treat you—a woman, and your husband’s successor?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Some doubted, some marveled, some paid little mind after the first novelty faded. Many young women wrote to me, seeking inspiration. Young men, too, who respected skill above gender. I found solace in honest inquiry, not praise."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s not forget parenting. Irène and Ève—did you raise them as scientists, or simply as daughters?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Both. I taught them science and mathematics at home, but never insisted they follow my path. Irène gravitated naturally to the laboratory; Ève to writing and music. My hope was to give them freedom to become themselves. I studied botany with them, fostered curiosity. It was the greatest joy—my daily laboratory of love."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What did you do for relaxation? I have this image of you always working in black, never cracking a smile."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Ah, but I did laugh. Pierre and I cycled, swam, took picnics. I loved to walk in the forest, to garden, to listen to music. My friends would sometimes find me laundering my chemist’s coat, or preparing a little feast for the staff on my birthday—all simple pleasures. My sadness, after Pierre’s death, was… deep, but I clung to grace in small things."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You’re so often immortalized as this stoic, even severe figure. But those who knew you speak of your humor—dry, subtle, but very real."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Humor was necessary, especially when one spends hours stirring cauldrons of pitchblende! I enjoyed light conversation, especially among the women at the laboratory. And, I confess, my daughters believed I could repair almost anything, from broken hearts to broken beakers."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Marie Curie wasn’t just an innovator—she was an egalitarian leader in her lab, treating assistants and colleagues, men and women, with rare respect. Her practical jokes and gentle banter could lighten the dreariest day."
+    },
+    {
+      "speaker": "Leo",
+      "text": "A quick technical question: You coined the term 'radioactivity.' How do you explain it simply to someone—um, say, a modern student—who’s intimidated by atomic physics?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Radioactivity is the ability of certain materials—like uranium or radium—to emit energy from their atoms, all by themselves. This energy can take the form of invisible rays or particles, and can be detected by sensitive instruments even when we see nothing with our eyes. It is a property of matter’s smallest parts—the atom’s inner heart loosening its bonds."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You never patented the processes for isolating radium, even though it made other people very rich. Why?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Pierre and I believed knowledge is a public trust—shared for the progress of all, not hoarded for private gain. To patent was to restrict, and I wished to encourage, not divide."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I read that instead of buying, say, a holiday cottage with your Nobel money, you invested it into your work, even giving some away. Why live so simply?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "What good is luxury, if curiosity is hungry? Research always needs more—more glassware, more chemicals, a better room for one’s assistants. I hoped one day to own a house with birds and a garden, but science was always my true home."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s talk scandal. Here in 1911 you’ve just been slandered in the French press, lost election to the Academy of Sciences, and been ordered by the Nobel Committee to stay away from Sweden. How do you emerge from that?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "With difficulty. False stories wound the most when one’s identity is already precarious—a woman, a foreigner, a widow. But I refused to conflate private attacks with public achievement. I answered the Swedish Academy: the Nobel was for work on radium and polonium, not ‘reputation.’ I chose to go to Stockholm for the prize, though my health was in crisis."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did you shield your daughters from all that gossip? It must have been hard, especially for Irène, who followed you into science."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was almost impossible. Irène learned strength by example, I hope. I tried to teach her that slander is the price women often pay for independence and success. But no mother wishes her child to face such hardship. We leaned on faithful friends—and, at times, on the kindness of strangers, like Hertha Ayrton in England."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Her friendship with Albert Einstein proved pivotal. He later wrote, 'Marie Curie is, of all celebrated beings, the only one whom fame has not corrupted.' If only every scientist could say the same."
+    },
+    {
+      "speaker": "Leo",
+      "text": "By the way—did you really try to donate your Nobel medals to support France in World War I?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Yes, I offered them to be melted for gold, but the National Bank declined. It was my small gesture; the real effort was my work equipping field ambulances and creating mobile X-ray units—the 'petites Curies.'"
+    },
+    {
+      "speaker": "Leo",
+      "text": "The 'Little Curies'—cars fitted with X-ray machines. You drove to the front, trained over a hundred women. Did you feel, then, you were at your most useful?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I have never felt prouder than when I could use my knowledge to save wounded men—removing shrapnel, giving surgeons the means to see inside injured bodies. I was no more than equal among my team; many of my students, including Irène, took greater risks than I."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you crave recognition—Légion d’honneur, academic posts, memorials?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Recognition is bittersweet. I longed for equality, not applause; for access, not adulation. I accepted such honors reluctantly—only when my refusal might hurt others."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Later, in the 1920s, you went to America—welcomed as a celebrity, meeting presidents, gifted expensive radium by women fundraisers. How did you handle so much attention?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was overwhelming. I am not comfortable before crowds—handling radium was far less frightening. I cherished the generosity that made it possible to expand research, especially knowing the radium would benefit patients, not me personally."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your legacy reached back to Poland, the Radium Institute in Warsaw. After a lifetime in exile, what did it mean to help your homeland in science?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "It was perhaps my proudest moment—building a bridge between my two countries. Science knows no borders; my hope is for each nation to have both knowledge and the tools to cure."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What are some misconceptions you wish people understood about your story?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "I did not work alone; many colleagues, many women, laid this foundation. The dangers of radiation were not understood, and I did not choose ignorance—no one could have predicted. And, despite two Nobel Prizes, I was not wealthy nor without struggle; I was always a teacher, a mother, a friend among equals."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Your notebooks are still radioactive, your name on laboratory buildings and periodic tables. Have you ever, in quiet moments, considered the risks you took—was it worth it?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "If what I have done has contributed, even in small measure, to the good of humanity, then any sacrifice is justified. I wish only that future scientists will proceed both with courage and with caution."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You once said, ‘One never notices what has been done; one can only see what remains to be done.’ After all you’ve achieved, do you still feel like you’re just getting started?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Always. Science is infinite—a horizon always just out of reach. That is both its agony and its joy. I am content, not with laurels, but with the next question awaiting an answer."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What would you want young women—and young men—listening now to remember most from your story?"
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Know that struggle is not a sign of failure, but of progress. That knowledge is a shared flame—tend it, and pass it on. Look beyond barriers, and trust your curiosity more than the prejudices of others."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You’ve been called radiant. I think you’ve given something brighter even than radium—the idea that wisdom, pursued with compassion, can change the world. Thank you, Madame Curie."
+    },
+    {
+      "speaker": "Marie Curie",
+      "text": "Merci, Leo. May your travels be guided always by wonder."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "And as our journey closes, let us picture the lab growing quietly dim, yet that hard-won blue glow persisting—proof that even the humblest beginnings can light the way for generations."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Soft closing of a laboratory ledger, gentle fizzing from chemical glassware growing fainter, then distant birdsong and the quiet hush of dawn, 16 seconds.",
+      "duration": 16
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Leo",
+      "text": "Marie Curie’s life was a symphony of intellect, resilience, and kindness—a story not of easy victories, but of courage meeting adversity again and again. From Warsaw’s occupied classrooms to Paris’s glowing laboratories, from private sorrow to public triumph, her legacy endures: seek truth, serve others, fear nothing but ignorance. May her radiance spark your own curiosity, wherever the path leads."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Thank you for joining us, dear listener, on this passage through shadow and light. In Madame Curie, we find not just a scientist, but a universal beacon—a reminder that the pursuit of understanding can brighten even the darkest times. Until our next journey, remember: history is never still. The echoes remain, just waiting to be heard."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Triumphant orchestral theme with warm strings and gentle brass, joined by soft rhythmic percussion, rising from medium to full volume and gradually fading to a single, hopeful piano note, 22 seconds.",
+      "duration": 22
+    }
+  ]
+}

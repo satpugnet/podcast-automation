@@ -20,6 +20,8 @@ def generate_voice_description(character_name, max_characters=1000):
     4. Be comprehensive enough for voice synthesis (3-4 sentences) while remaining focused on distinctive vocal characteristics
     5. Mention any known speech impediments, unique verbal mannerisms, or notable speaking styles from historical records if available
     6. Include specific references to the era they lived in and how that might have influenced their speech patterns
+    7. Specify the sex of the historical figure to ensure appropriate voice characteristics
+    8. Ensure the voice carries appropriate emotion - whether passionate conviction, quiet determination, scholarly enthusiasm, or other emotions that would be characteristic of this historical figure's personality and circumstances
     
     Important: Do not mention the historical figure's name in the description itself. Refer to them using pronouns or as "the speaker" instead.
     """
