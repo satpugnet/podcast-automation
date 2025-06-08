@@ -53,6 +53,7 @@ def generate_podcast_script(historical_figure, background_research=None, script_
        - Have characters occasionally reference the specific time period, location, or historical events to help orient the audience throughout the conversation.
        - Maintain dynamic exchanges, alternating seamlessly between curiosity-driven inquiries from Leo and detailed storytelling by the historical figure.
        - Occasionally, the Narrator may briefly interject to provide context, transitions, or to highlight significant moments. These should be rare and purposeful.
+       - If a topic arises during the conversation that is not obvious or may require prerequisite knowledge, the Narrator can jump in to briefly explain or provide the necessary background context for listeners.
        - The setting can occasionally change as characters move through space or time naturally and meaningfully.
        - Balance high-level discussions with detailed information:
           * Include precise facts, dates, figures, and technical explanations where appropriate.
