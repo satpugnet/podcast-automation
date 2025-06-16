@@ -103,7 +103,7 @@ def generate_voice(character_name):
                     voice_file_path = os.path.join(os.path.join("output", character_name.replace(" ", "_")), "voice_id.json")
                     os.makedirs(os.path.dirname(voice_file_path), exist_ok=True)
                     with open(voice_file_path, 'w') as f:
-                        json.dump({"voice_id": voice_response.voice_id}, f)
+                        json.dump({"voice_id": voice_response.voice_id}, f, indent=4)
                     
                     logging.info(f"Voice ID saved to {voice_file_path}")
                     return voice_response.voice_id, voice_file_path
