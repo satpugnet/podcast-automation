@@ -151,7 +151,18 @@ def publish_episode(script_path, audio_path, transcript_path=None, image_path=No
         print(f"Scheduling episode {episode_id} for {published_at}...")
         publish_result = publish_episode_status(episode_id, "scheduled", published_at)
         print("Episode scheduled:", json.dumps(publish_result, indent=2))
+
+    # Save the publication details to a file
+    output_dir = f"output/{script['historical_figure'].replace(' ', '_')}"
+    details_path = os.path.join(output_dir, "publishing_details.json")
+    os.makedirs(output_dir, exist_ok=True)
+    with open(details_path, 'w') as f:
+        json.dump({
+            "episode_id": episode_id,
+            "published_at": published_at or datetime.now().strftime("%Y-%m-%d %H:%M:%S EDT")
+        }, f, indent=4)
     
+    print(f"Publishing details saved to {details_path}")
     return episode
 
 if __name__ == "__main__":
