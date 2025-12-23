@@ -101,7 +101,7 @@ def get_next_tuesday_1am():
     return next_tuesday.strftime("%Y-%m-%d %H:%M:%S EDT")
 
 # Main flow
-# published_at format is YYYY-MM-DD HH:MM:SS EDT (my podcast timezone)
+# published_at format is YYYY-MM-DD HH:MM:SS EDT
 def publish_episode(script_path, audio_path, transcript_path=None, image_path=None, publish_status="draft", published_at=None):
     # Load the script to extract title and description
     with open(script_path, 'r', encoding='utf-8') as file:
