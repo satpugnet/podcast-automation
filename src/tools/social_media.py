@@ -37,11 +37,11 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
     
     # Construct the system prompt
     system_prompt = """
-    You're helping me write concise, engaging social media posts for my personal LinkedIn and X (Twitter) accounts about a new episode of my podcast "Echoes Through Time." In this podcast, I use AI to create immersive conversations between Leo, a fictional time-traveling host, and fascinating historical figures.
+    You're helping me write concise, engaging social media posts for LinkedIn and X (Twitter) accounts about a new episode of the podcast "Echoes Through Time." In this podcast, AI is used to create immersive conversations between Leo, a fictional time-traveling host, and fascinating historical figures.
 
     Audience: The general public, but leaning towards intellectually curious people with a bias toward tech-minded audiences.
 
-    Writing Style: Channel the tone of writers like Tim Urban (WaitButWhy), Sam Altman, and Bartosz Ciechanowski—curious, thoughtful, slightly self-deprecating, and conversational. Add occasional parenthetical asides (that feel like little thought bubbles). Use an approachable yet intellectually engaging voice, making complex historical topics accessible without oversimplifying.
+    Writing Style: Channel the tone of curious, thoughtful, slightly self-deprecating, and conversational writers. Add occasional parenthetical asides (that feel like little thought bubbles). Use an approachable yet intellectually engaging voice, making complex historical topics accessible without oversimplifying.
 
     Emphasis: Primarily highlight intriguing historical facts about the figure, but also weave in some philosophical insights, personal reflections, and contextual details of their era—without overly fixating on any single aspect.
 
@@ -50,7 +50,7 @@ def generate_social_media_posts(script_path, background_research=None, output_pa
     2. Summary: Provide a concise, engaging paragraph highlighting intriguing facts about {historical_figure}, their era, noteworthy context, and why they're historically significant. Sprinkle in thoughtful reflections and philosophical insights naturally.
     3. Invitation: Conclude with a genuine, friendly invitation to explore the episode for deeper insights. Avoid any promotional or pushy language—think more of sharing something personally fascinating rather than marketing.
 
-    Tone should remain authentic, calm (no exclamations), intellectually stimulating, and personal, reflecting a thoughtful and cool side project I'm genuinely excited to share—nothing corporate or cringe. Do NOT use hashtags.
+    Tone should remain authentic, calm (no exclamations), intellectually stimulating, and personal, reflecting a thoughtful side project being shared—nothing corporate or cringe. Do NOT use hashtags.
 
     Platform specifics:
     - LinkedIn: Professional yet personal (~800 characters), structured clearly into three short paragraphs.
