@@ -3,8 +3,7 @@
 
 
 # Social Media
-- Every new episode, post on Linkedin and Twitter and announcement and a summary of the historical figure. It should be a TLDR and then say that if they want to know more, it is in the podcast.
-    - Automate it too
+- Automate social medias with announcement and a summary of the historical figure.
 
 # Discussion script
 - Add cross-fade option to SFX
