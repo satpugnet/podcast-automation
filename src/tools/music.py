@@ -66,7 +66,7 @@ def generate_music_prompt(script_json_path):
     
     # Generate the music prompt
     response = client.chat.completions.create(
-        model=os.getenv("OPENAI_MODEL", "gpt-4"),
+        model=os.getenv("OPENAI_MODEL", "gpt-5.2"),
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
