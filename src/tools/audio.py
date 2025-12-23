@@ -95,9 +95,18 @@ def generate_podcast_audio(script, guest_voice_id, output_dir):
     os.makedirs(os.path.join(output_dir, "audio/sfx"), exist_ok=True)
     
     # Define voice IDs for each speaker
+    # Voice IDs should be set via environment variables for your ElevenLabs account
+    narrator_voice_id = os.getenv("NARRATOR_VOICE_ID")
+    leo_voice_id = os.getenv("LEO_VOICE_ID")
+    
+    if not narrator_voice_id:
+        raise ValueError("NARRATOR_VOICE_ID not found in environment variables. Set this to your ElevenLabs voice ID for the narrator.")
+    if not leo_voice_id:
+        raise ValueError("LEO_VOICE_ID not found in environment variables. Set this to your ElevenLabs voice ID for Leo.")
+    
     voice_ids = {
-        "Narrator": "NOpBlnGInO9m6vDvFkFC",  # Adam voice for intro and outro
-        "Leo": "v2YwWtvprj8WUvzb7D4K", # Currently UgBBYS2sOqTuMpoF3BR0 (Mark), used to be v2YwWtvprj8WUvzb7D4K (Leo Time Traveler)
+        "Narrator": narrator_voice_id,
+        "Leo": leo_voice_id,
         script["historical_figure"]: guest_voice_id
     }
     
