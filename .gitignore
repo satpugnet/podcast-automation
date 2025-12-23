@@ -21,10 +21,12 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-outp
+
 # Environment variables
 .env
-.env.*
+.env.local
+.env.*.local
+!.env.example
 
 # IDE files
 .idea/
@@ -44,3 +46,8 @@ Thumbs.db
 # Project specific
 *.log
 *.mp3
+
+# Output and generated content (contains personal podcast data)
+output/
+tweet/
+image/
