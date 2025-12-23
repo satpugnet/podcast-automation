@@ -1,0 +1,345 @@
+{
+  "title": "Joan of Arc – Voices, Valor, and the Faith That Changed a Kingdom",
+  "description": "Journey through medieval France with Joan of Arc and Leo the Time Traveler. Discover the mystical voices that inspired Joan, the legendary liberation of Orléans, her struggles as a peasant girl-turned-national savior, and the enduring power and controversy of her remarkable life and legacy. Now expanded with richer scenes, deeper reflection, and new historical insights to guide you through a full thirty-five minutes of immersive storytelling.",
+  "historical_figure": "Joan of Arc",
+  "time_period": "Early 15th century (1429-1431), Hundred Years’ War",
+  "location": "Domrémy village, Vaucouleurs, Orléans, Reims, and Rouen, France",
+  "intro": [
+    {
+      "speaker": "SFX",
+      "text": "Echoing church bells intertwine with distant battle drumming, faint shouts, and horse hooves on cobblestone, all blending, rising, then quieting to a single soft prayer.",
+      "duration": 12
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Amidst the swirling mists of war-torn France, imagine a world where hope flickers like a candle against the darkness. The year is 1429. Villages are scarred by decades of conflict. Rumors whisper of a peasant girl—illiterate, unwavering—claiming to bear messages from heaven. With courage audacious as her white armor, she steps into battle, banner raised, destined to lead an army, and, somehow, to change the fate of a nation. Today, we travel to the soul of the Hundred Years’ War to meet the renowned Maid of Orléans.",
+      "duration": 18
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Welcome to Echoes Through Time, the podcast where history comes alive through extraordinary conversations. I’m your host, your loyal narrator—and in this episode, our time-traveling guide Leo journeys to meet Joan in the vivid heart of medieval France. Prepare for prayers, prophecy, and a story that burns like a beacon on the world’s stage…",
+      "duration": 10
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Content note: Our journey includes discussions of war, executions, and religious visions. Though centuries old, these themes may resonate strongly. Listener discretion is advised.",
+      "duration": 6
+    }
+  ],
+  "arrival_scene": [
+    {
+      "speaker": "SFX",
+      "text": "Crackling fireplace with gentle wind outside, chickens clucking, faint sheep bleating, muted village chatter; footsteps on packed earth approach a wooden door.",
+      "duration": 10
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Picture this: the village of Domrémy, early spring, 1429. Smoke drifts from low thatched cottages; muddy lanes are cut with the tracks of cattle and clogs. Inside a simple home, the scent of rye bread and woodsmoke hangs amid devotional icons glittering in the firelight. At the table sits a young woman—barely seventeen—her face illuminated by the hearth and the flame of conviction.",
+      "duration": 12
+    },
+    {
+      "speaker": "SFX",
+      "text": "Outside, armorers’ hammers ring on anvils, distant dogs bark, and a sudden gust rattles wooden shutters before settling again.",
+      "duration": 7
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Leo, nearly breathless with nerves and excitement, steadies himself. Beyond the door lies Joan of Arc at the dawn of her myth.",
+      "duration": 6
+    },
+    {
+      "speaker": "SFX",
+      "text": "Door creaks open softly, revealing birdsong and the hush of two strangers seeing one another for the first time.",
+      "duration": 6
+    }
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Bonjour, mademoiselle. It’s… well, it’s an honor to be here—Domrémy, at the edge of France. There’s an energy in this place, different from anywhere I’ve traveled. My name is Leo. I hope I’m not too much of an interruption?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "You are welcome, though I receive few strangers. The days grow ever stranger, it seems. I was just returning from the fields. You travel—what brings you so far?"
+    },
+    {
+      "speaker": "Leo",
+      "text": "Sometimes I feel called to learn, rather than anywhere specific. Your village is brimming with stories—and your story… well, it’s not like any other. Would you mind sharing what life is like for you here, before the legend began?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Life here is work and prayer. I tend sheep, mend garments, and help at home. War sits heavy—some nights, we hear distant shouts and hide from raiders. My hands are more used to spinning thread than wielding banners, Leo. Yet there’s peace in simple days before the world notices you."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Do you find strength in that quiet? Were you close with your family?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "My father, Jacques, is stern. My mother, Isabelle, gentle-hearted and sings the old prayers. I have brothers and a sister, Catherine. Our roof is humble, but we have enough—barely. We share what we can; feast days fill the cottage with laughter, though fear sits outside our door when soldiers pass."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Families in my time can be… complicated, too. You grew up amid war. Did you already sense you’d be called to something greater?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "No. As a child, I only wanted peace. Even when I saw children return bloodied from quarrels in nearby villages, I prayed the world would grow kinder. But God’s plan—so they tell me—can take root in the least prepared heart."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Can you tell me about the day everything changed? When you first heard the voices?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "The first time, I was in my father’s garden, thirteen years old. A bright light—gold, like dawn—surrounded me. Then Michael’s voice—firm, gentle—“Jehanne, be pious and go to church; you are to help the King.” I wept in fear at first. But the voices returned—Saint Catherine, Saint Margaret. They told me to have courage. I hid this from my family for years."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you wonder—why you? Why not someone already important?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Often. I was nobody—could not read, knew nothing of courts or arms. The voices said, “France is in peril. The Dauphin is the true heir; you must lead him to Reims.” Sometimes I tried to refuse. The saints reassured me: God chooses whom He wishes, not always the mighty."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What moment convinced you to act?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "When English allies burned villages nearby—children fled in terror. The voices grew urgent: “Go—raise an army! Bring aid to Orléans.” Duty outweighed fear. I rode to Vaucouleurs and pleaded with Captain Robert de Baudricourt. He laughed at first, but I would not relent. When God calls, you cannot rest."
+    },
+    {
+      "speaker": "Leo",
+      "text": "That ride—over war-torn land—must have been perilous. Did no one try to stop you?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Many scorned me; some threatened me. My father feared I’d bring ruin. Yet a few strong men believed. I cut my hair short, wore men’s clothing for protection—and because my voices insisted. Some call it provocation; I call it survival."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did you prepare physically? Modern audiences picture you effortlessly armored, but training takes time."
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "At Tours I received armor fitted to my frame; the smiths laughed—they’d never forged such for a woman. I practiced with lance and sword before dawn. My arms bruised; my thighs ached from the saddle. Bravery, Leo, is often more blister than miracle."
+    },
+    {
+      "speaker": "Leo",
+      "text": "On the road, what sustained you during cold nights?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Prayer and song. We sang the Salve Regina beneath the stars. Though mud clung to our boots, the voices promised we would see Chinon. At times I doubted—but sunrise brought fresh courage."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Low campfire crackles; distant owls hoot; soft humming of a medieval hymn fades in and out.",
+      "duration": 10
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Listeners, imagine the hush of a soldier’s camp—the crackle of embers, the metallic rustle of maille resting beside makeshift pillows. Even in wartime, small moments of peace stitched themselves into Joan’s journey."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s speak of Chinon—your first audience with the Dauphin. How did you feel walking into that hall?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Flustered. The court buzzed: velvet, jewels, whispers. The Dauphin hid among them, disguised. My voices guided me— I walked straight to him. His shock was plain. In secret I told him a prayer only he and God knew. He turned pale; tears welled in his eyes. From that moment, he trusted."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Yet trust alone wasn’t enough—you were interrogated at Poitiers. Weeks of questions. How did you endure?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "By answering plainly. Some clerics were kind; others hurled traps. I asked them to write to the people of Orléans and hear their need. When they doubted my purity, noble ladies examined me. They found no deception."
+    },
+    {
+      "speaker": "Leo",
+      "text": "And they let you ride under the king’s banner."
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Yes. I set out, white banner unfurled—linen with lilies, Christ holding a globe, angels on either side, 'Jhesus Maria' inscribed. Holding it lifted hearts; I rarely drew my sword."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Speaking of swords, you had one found behind an altar?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "At Sainte-Catherine-de-Fierbois. The priests unearthed an old blade marked by five crosses. I carried it but never smote a life with it—only enforced discipline. Cursing, lewd songs, and the mistreatment of women had no place in our camp."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s turn to Orléans. Was the city as desperate as the chronicles say?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "More so. Hunger gnawed the people; rats scurried openly. When I rode through the English lines with grain and wine, bells tolled and tears flowed. At dawn I urged assault—generals hesitated, but citizens surged to fight. I raised my banner; an arrow pierced my shoulder. I pulled it free, prayed, and returned. By week’s end, the English withdrew."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Some say a shift in wind during a critical river crossing was miracle enough."
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "A convoy stuck upriver; the wind was wrong. I told the men, 'Have faith.' Moments later the wind veered. Luck, some say; Providence, say I."
+    },
+    {
+      "speaker": "Leo",
+      "text": "After Orléans came Jargeau, Meung-sur-Loire, Patay—major blows to English archers. What was Patay like?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Patay was chaos and thunder. Our cavalry burst upon the archers before they set stakes. Arrows darkened the sky, yet we rode faster. Victory was swift; English morale shattered. Even skeptics sensed God’s hand."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Clashing steel, galloping horses, distant horns; gradually fade into solemn church bells.",
+      "duration": 12
+    },
+    {
+      "speaker": "Narrator",
+      "text": "With Patay won, a path opened to Reims. The coronation loomed, but danger shadowed every mile."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Reims—the anointing of Charles VII. Your tears are recorded in chronicles. What stirred you most?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Passing through towns that opened their gates—peasants kneeling, mothers lifting infants for blessing—proved our mission holy. At Reims, holy oil touched the king’s brow; choir voices rose like angels. I knelt and whispered, 'Gentle King, now is fulfilled the will of God.' Joy blazed—then faded. Work remained."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You pressed to march on Paris, yet counselors stalled. How did that strain you?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Deeply. While courtiers feasted, soldiers bled. At Paris I was shot in the thigh and dragged from the moat. The king withdrew. He granted my family nobility—du Lys—but withheld full trust."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you fear your influence waning?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Yes. Voices grew faint, not from abandonment but from my own fatigue. Yet I pushed forward—Compiègne begged for aid; I could not refuse."
+    },
+    {
+      "speaker": "Leo",
+      "text": "At Compiègne you were captured. Tell us about that moment."
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "I covered retreating soldiers while the gatekeepers panicked and shut the drawbridge. My horse was dragged down. The Burgundians seized me. I had been warned by the voices, but I would not forsake the field."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Many call what followed betrayal—that Charles sent no ransom."
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Perhaps. Kings play games. The Burgundians sold me to the English for ten thousand livres. I placed my hope in God alone."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Rouen—the trial. Thirty-one public sessions, private interrogations, scholars arrayed against you. How did you remain steadfast?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "I prayed and listened for the saints. They pressed me on doctrine: voices, clothing, submission to the Church. I answered: 'God must be served first.' When asked if I was in God’s grace, I replied, 'If I am not, may God put me there; if I am, may He keep me.' They found no heresy in logic they could not twist."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Listeners—under medieval canon law, a 'relapsed heretic' faced the stake. Joan’s refusal to abandon men’s clothing inside prison—worn for protection against assault—became the court’s pretext."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you ever think of falsely repenting to save your life?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Exhausted, I signed a paper I could not read, believing they’d spare me. They condemned me to perpetual prison. Guards threatened me; I returned to men’s clothes for safety. That act they named 'relapse.' Sentence: death by fire."
+    },
+    {
+      "speaker": "Leo",
+      "text": "On the day of execution, what guided your heart?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "They forced me onto a cart, placed a miter reading 'heretic, relapsed, apostate.' I asked for a cross; an English soldier fashioned one from a stick. Flames rose; I cried 'Jesus!' until my voice was ash. I forgave my judges. Fire could not burn my faith."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Rising flames crackle; a distant choir chants 'Kyrie Eleison' that slowly fades into silence.",
+      "duration": 14
+    },
+    {
+      "speaker": "Leo",
+      "text": "After your death, legends multiplied. Imposters claimed to be you. Two decades later, the Church declared you innocent. How do you view such vindication?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Justice late is better than none. I pray it eased my mother’s grief. Yet earthly courts matter little beside God’s judgment."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Today you are a saint, a rallying symbol for causes you might not recognize—nationalism, feminism, faith. Does that trouble you?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Let my life remind people of humility, not pride. If any wield my memory for hate or vanity, they misunderstand me. I fought for king, country, and God—nothing more."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Modern scholars debate your visions—epilepsy, delusion, trauma. What do you say to those explanations?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "Science seeks answers; faith seeks meaning. Call my voices illness or miracle—still I obeyed conscience. If doubters listen closely to their own hearts, perhaps they, too, will hear the whisper of purpose."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Before we part, what do you wish people truly remembered about you?"
+    },
+    {
+      "speaker": "Joan of Arc",
+      "text": "That I loved France; that I prayed for enemies; that courage is duty performed despite fear; that obedience can mean saying 'no' to power. Above all, the smallest among us may do great things when the cause is just."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Merci, Jehanne la Pucelle. I will carry your stubborn, shining hope into every era I visit. You remind us what it means to stand true."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Fire crackles softly, a lone church bell tolls, and the wind rises, carrying faint, hopeful singing in old French.",
+      "duration": 12
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Leo",
+      "text": "Joan of Arc’s life burned bright and vanished in a moment, but her legacy echoes on—across kingdoms, causes, and centuries. She proves that sincerity and courage—no matter their origin—can inspire nations, and that no oppression can silence a soul aligned with righteousness."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "An illiterate peasant, a visionary, a saint, a martyr—Joan of Arc was all and none of these. We remember her not simply for victories or suffering, but for revealing what faith and leadership mean in their purest, most uncompromising forms."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "Thank you for joining us on this extended journey through visions, battlefields, and tribunals. May Joan’s voice remind us: even in our darkest hours, hope’s banner might ride forth on the shoulders of the least expected."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Somber Gregorian chant swells into triumphant orchestral strings, then dissolves into gentle silence.",
+      "duration": 14
+    }
+  ]
+}

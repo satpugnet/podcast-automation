@@ -1,0 +1,516 @@
+{
+  "title": "Yuri Gagarin – The First Human in Space: Orbits, Childhood, and a Smile That United the World",
+  "description": "Travel to Soviet Star City as time-traveler Leo sits down with Yuri Gagarin, the first human to orbit the Earth. Explore his extraordinary journey from war-torn childhood to cosmonaut, the secret challenges of the space race, global fame, heartbreak, and the human hope behind the legend. An immersive, moving conversation revealing the real Gagarin and the legacy he left for the world.",
+  "historical_figure": "Yuri Gagarin",
+  "time_period": "Spring, 1962 – the year after Gagarin's historic flight, amid the fever of the early Space Race",
+  "location": "Star City (Zvyozdny Gorodok), northeast of Moscow, USSR – inside Gagarin's cosmonaut office overlooking the cosmonaut training grounds",
+  "intro": [
+    {
+      "speaker": "SFX",
+      "text": "Somber hush transforms into swelling orchestra and fluttering electronics, heartbeat thrum, sudden rocket ignition, 12s.",
+      "duration": 10
+    },
+    {
+      "speaker": "Narrator",
+      "text": "On a chill April morning in 1961, humanity’s oldest dream cracked wide open. With a thunderous roar, a young man named Yuri Gagarin rode fire and steel beyond the sky’s blue edge, orbited our fragile planet, and came home with a smile that thawed the old world’s suspicions—if only for a day."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "But who was the man inside that pumpkin-orange suit? What scars and hopes did he carry, and what did he see—of Earth, of history, of his own soul—on that daring, single orbit? Today on Echoes Through Time, we unfasten the capsule’s hatch and step into the heart of Star City, deep in the Soviet spring of 1962, to join Leo as he meets the boy from Klushino who became the first to circle the globe—and changed it forever."
+    }
+  ],
+  "arrival_scene": [
+    {
+      "speaker": "SFX",
+      "text": "Gentle birch breeze, distant crows, hallway footsteps, teakettle whistle, door creak, 12s.",
+      "duration": 8
+    },
+    {
+      "speaker": "Narrator",
+      "text": "It’s late morning in Star City—the secret warren where the Soviet Union trains its greatest spacefarers, hidden behind checkpoints, blooming lilacs, and scientific ambition. Engineers dart between concrete-block offices, instructors bellow on a distant parade ground. Inside one sunlit room, a battered flight helmet, models of Sputnik, and a single photograph of a smiling family tell their stories more simply than any propaganda poster ever could. Leo, uncertain-footed and wide-eyed, is about to step across decades and meet history’s new face of courage. The kettle whistles. The legend, in blue Air Force tunic, beckons him in."
+    }
+  ],
+  "conversation": [
+    {
+      "speaker": "Leo",
+      "text": "Excuse me… I hope I’m not interrupting? I’m looking for Major Gagarin. My name is Leo."
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "You’ve found him! Come in, Leo—no badges or passwords needed here. Are you with the engineers, or after more of those interviews?"
+    },
+    {
+      "speaker": "Leo",
+      "text": "Actually, I’m something of… a traveling student, I guess. Not really an engineer. But I’ve read everything I could find about your flight—it’s surreal to be here. Is it always this… busy?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Busy, yes. I sometimes think the only thing that orbits faster than a capsule is paperwork! Here, have some tea. It helps—I promise."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Porcelain clink, steaming tea poured, sugar cube crackle, cozy hush, 8s.",
+      "duration": 8
+    },
+    {
+      "speaker": "Leo",
+      "text": "Thanks. It smells incredible… much better than astronaut food, I bet."
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Ha! Don't talk to me about astronaut food. Our first ‘space meals’ were pureed meat in toothpaste tubes—can you imagine that at a party? But please, let’s use proper cups."
+    },
+    {
+      "speaker": "Leo",
+      "text": "So, to start at the beginning—do you remember the very first moment you ever wondered what was up there, beyond the clouds?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "That’s easy. As a boy in Klushino, after war’s end—out on the steppe at night, there was nothing but stars and silence. My father showed me constellations. He said, ‘Yura, the sky is large, but you must never let it scare you. All things are possible for a person who is not afraid.’"
+    },
+    {
+      "speaker": "Leo",
+      "text": "That’s beautiful. But wasn’t childhood there… really tough? I mean, your village was occupied during the war. How does a child process that kind of trauma?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Yes, it was hard. The Nazis burned my school—my first year of learning ruined in a night. I saw friends taken away, houses leveled. Food was always scarce. In 1943, both my older brother and sister were seized and sent to work in Germany. We hid tools in the ground, learned to listen for the sounds of tanks in the distance. Some mornings, survival was the highest ambition."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did it make you more determined, then, when peace finally came? Or was it anger at what you’d seen?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Peace was a miracle, Leo. When the army arrived—Red stars against the snow—I felt hope for the first time. Angry? Perhaps as a boy. But quickly I learned that hope was stronger. I wanted to build, to learn. My mother, she grew sunflowers in a little patch of dead soil, just to remember that the world can heal."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You went from farm chores to science and engineering pretty quickly, didn’t you? Was it always easy for you—or did being short ever hold you back?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Short? I was barely more than five feet! When I started pilot training, my commander looked me up and down and said, ‘We ordered pilots, not schoolboys!’ I had to sit on an extra cushion to see the landing strip. It was good for a laugh. But we Russians are stubborn—I worked twice as hard to make up for size."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I guess height was a hidden advantage later in those cramped spacecraft. But what attracted you to flying? Was it the science, the freedom… or just the thrill?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "All of it. First flight—beautiful! Suddenly, the world is below, silent, almost gentle. You see how small a village looks, how thin a road is. It felt like charting new territory. I couldn’t get enough. Even now, after space, I crave the feeling."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I read you were posted way up near the Arctic. Was that rough?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Very. Long winter, roaring winds. The best flying weather, they said, was when your eyelids froze shut. But we laughed, played hockey on ice so thick you could lose your stick if you dropped it. Camaraderie, suffering, a little vodka—it keeps you warm."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Were there any close calls in training before space?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Of course. In fighter jets, sometimes the controls would freeze or you’d lose visibility. I learned quickly: never trust that the machine wants to cooperate. The pilots who survived weren’t the bravest, but the most careful—and lucky."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did you hear about the cosmonaut program itself? Sputnik had just launched, right?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "When Sputnik flew in '57, it amazed the whole world… including me! Suddenly, science made heroes out of mechanics. I saw the poster for cosmonaut selection at my base, and I knew—if I didn’t apply, I’d regret it. They chose 20 of us out of thousands. The training was brutal, but every step felt like history."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What was the hardest part: the science, the physical torture-tests, or living under all that secrecy?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Ah, secrecy. We could not even tell family at first—we made up stories, said we were test pilots or engineers. The physical part was like boot camp for the soul: spinning until you’re sick, learning to survive in freezing forests, even designing your own parachute landing. Still, the science was more difficult, especially with the pressure to never let the Americans beat us."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Do you remember the first actual space capsule you stepped into? Did it seem… safe?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Safe? It was like being shut in a large cannonball with a typewriter and a thousand wires. I trusted the engineers, but we all knew one thing: if anything failed, you wouldn’t be coming home."
+    },
+    {
+      "speaker": "Leo",
+      "text": "But there was a mannequin launch first—you called it ‘Ivan Ivanovich’? That’s almost comical in retrospect."
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Ivan Ivanovich, our poor test dummy! We dressed him up, sent a dog along, and broadcast folk songs—hoping to confuse American spies. People today don’t realize how much pressure there was to keep our secrets secret. Even the first real attempt could not be announced until I was safely down."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s talk about Vostok 1. The countdown, what were you really thinking? And that famous ‘Poyekhali!’ moment—was it spontaneous, or planned?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "It was spontaneous—I felt ridiculous, sitting alone on the radio, and wanted to crack the tension. 'Let’s go!'—simple, excited. Looking back, it was almost childish joy. But the moment the rocket engines lit, childishness was gone. All I could hear was my pulse, rockets roaring, and something like a lullaby in my mind."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did your body react, once the acceleration kicked in? People used to think you’d black out…"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "We didn’t know for sure. I held on—felt ten times my weight crush me into the seat, impossible to move, then suddenly… nothing. Floating! My arms rose like they wanted to wave on their own. Even so, the body, the mind—they adjust quickly. I wasn’t dizzy or sick, just in awe."
+    },
+    {
+      "speaker": "Leo",
+      "text": "And then your view, the whole Earth—what do you say in a moment like that?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "At first, disbelief. Then: 'The Earth is blue. How wonderful.' I spoke those words, and after, I cried—quietly. You see clouds, oceans, continents, all in silence. It is the greatest cathedral I have ever visited. There are no petty quarrels from up there."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did your mind wander to home? To your family? Or were you too focused on instruments, the mission tasks?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "There was a time, especially when I passed into Earth's shadow, and the tape recorder stopped. I thought about Valentina, my daughters, my parents—how small they must seem from orbit. I even felt guilt: what if I did not come back?"
+    },
+    {
+      "speaker": "Leo",
+      "text": "Was there ever a point you felt real fear, that you might not return?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Yes. Reentry—when flames covered the window, and the heat was blinding. I thought, ‘Perhaps this is the end.’ I sent a farewell to ground control. They never broadcasted it, of course. History likes its heroes braver than they feel."
+    },
+    {
+      "speaker": "Leo",
+      "text": "And parachuting out at seven kilometers altitude—was that the plan all along?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "It was the only plan! The Vostok could not land safely with me inside. So at seven kilometers, I ejected. For a moment, the air rushed into my suit—the valve stuck, I nearly choked. I kicked at the helmet, then it sealed. Only later did I laugh about how a potato field almost became my final frontier."
+    },
+    {
+      "speaker": "Leo",
+      "text": "It sounds like your sense of humor saved you as much as anything technical."
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Perhaps! Humor is armor. Our whole cosmonaut corps teased each other to stay sane. The sparrow and rocket story—that’s a favorite. I say, ‘If someone set your tail on fire, you would fly fast too!’"
+    },
+    {
+      "speaker": "Leo",
+      "text": "How were you received by the farm family you met first, right after landing? Were they scared?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "They were not just scared—they were sure I was a Martian! Bright orange, big helmet—what else could they think? I tried to comfort them: 'Don’t be afraid, comrades, I am Soviet just like you.' After some stunned silence, they ran to fetch others from their village."
+    },
+    {
+      "speaker": "Leo",
+      "text": "And all the ‘CCCP’ painted on the helmet—last-minute detail to make sure you weren’t mistaken for an invader?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Yes. Imagine, flying around the whole world, then being mistaken for an enemy when you land. A few quick brushstrokes spared me some trouble. Soviet improvisation!"
+    },
+    {
+      "speaker": "Leo",
+      "text": "After that, everything changed overnight. Moscow, the grand parade in Red Square—millions of people, Premier Khrushchev himself. How did that feel?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "It was overwhelming—a sea of faces, flags, music. I could barely catch my breath. Khrushchev hugged me, told me, ‘You showed the world our strength.’ They showered me in medals; even gave me one for tilling the Virgin Lands, since I landed among potatoes! People ripped off my uniform buttons as souvenirs—I carry spares now, just in case."
+    },
+    {
+      "speaker": "Leo",
+      "text": "How did your parents react? Were they at the parade too?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "They came later, here to Star City. My mother just cried, pressing my face between her hands. All the medals in the world are nothing compared to that."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You became an international icon overnight—you traveled to dozens of countries. What was the most memorable meeting you had?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "There are so many. The Queen of England at Buckingham Palace was very gracious—she overlooked my muddy shoes. In Manchester, workers stood in pouring rain just to see me, and in Liberia, I was made a tribal chief. They draped me in robes and paraded me through their villages—I tried not to look startled."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did you sense that your flight meant more than just a Soviet victory? That maybe it gave hope to people everywhere?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "I hope so. Journalists asked if I felt like a Soviet hero—I said, 'I am a friend of all mankind.' Up there, borders seem very silly. If I am remembered as a bridge, not a wall, that is enough."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Back in the USSR, wasn't there a lot of pressure? Not just to be perfect, but to keep smiling, always?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Yes, there was pressure. Sometimes, I wished I could escape to a quiet river with a fishing rod. A general once told me, ‘You no longer belong to yourself—you are public property now.' I try to give people what they need. But heroism—it can be lonely work."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You’re famous for that grin, but were there moments it was just a mask?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Plenty. But I try to see the humor in things. If I lost my smile, people would worry more. Sometimes, you smile for them, and it becomes real again."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Can I ask about your wife Valentina? Was it hard on her, seeing you turned into a living legend?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Hard? Impossibly so. Every rumor, every photo, every strange woman I spoke to… she bore it all. She is braver than people know. Family becomes your foundation and your hiding place."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You had two daughters, right? Did they understand yet what you had done?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "They were too young then. Now, they ask why everyone wants pictures with their papa. I hope they will grow up to see that dreams are within reach, no matter where you start."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You were grounded after Vostok—prohibited from flying again. Was that a disappointment?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Very much. I argued a lot. I wanted to return, to learn more. But the Party said, 'We must not risk our symbol.' They feared losing me would break morale. So I worked in training, tried to make future flights safer. My friend Komarov was not so lucky—when Soyuz 1 crashed, it broke my heart."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Komarov’s death was a tragedy. I’ve read that you tried to stop the launch—wrote a long report about the problems with Soyuz. Is that true?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "It is true. Over 200 problems, serious design flaws. I pleaded—let me fly instead, maybe the bosses would reconsider. They did not. Komarov died cursing those who sent him up. After that, I lost trust in the system’s infallibility."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did it change how you saw your own legacy?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Yes. I realized that progress must never outpace safety or humanity. Since then, I’ve fought to make training stricter, to honor honesty over heroics."
+    },
+    {
+      "speaker": "Leo",
+      "text": "The official story has always been nothing but triumph and perfection. Was it difficult to tell the real story, privately?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Very difficult. Secrets keep us safe, but they also bury our mistakes. I try, quietly, to remember every man and woman who risked—and sometimes lost—so others could fly. It is the least I owe them."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Let’s talk about a persistent myth: the ‘I don’t see any God up here’ quote. Did you ever actually say that?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "No. That came from Khrushchev, not me. I was baptized as a child, and my mother kept small traditions quietly. I ask only that each person see what they wish in the stars."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "It’s worth noting—for listeners today—that Gagarin’s life and legend were often shaped for ideological effect. In reality, he defies simple stereotypes."
+    },
+    {
+      "speaker": "Leo",
+      "text": "So what do you think space travel means for ordinary people? For kids in villages, or people who will never touch a rocket?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "I want them to know: it is not origins that matter, but dreams and hard work. I was a poor farmer’s son, yet the sky opened for me. The triumph belongs as much to the invisible workers—the tailors who sewed my suit, the machinists who made a single bolt. We all orbit together."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What would you say is your proudest moment—not just as a cosmonaut, but as a person?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "There are two. Returning alive, seeing my family again. And the first time a little boy handed me a drawing and said, ‘I want to go to space, like you.’ That is when I felt purpose."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Do you think humanity has what it takes, spiritually, to really explore the cosmos together?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "We must, or we will not survive ourselves. If I have learned anything, it is that division brings ruin, while curiosity and friendship can carry us further than rockets."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Is there something about your personal life—your flaws or funny stories—you wish the world knew?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Oh, plenty! I once jumped out a window at a holiday sanatorium to avoid an awkward meeting with my wife—and hit my head so hard, the scar is still visible. Or that now every cosmonaut must ‘water’ the bus tire before launch, because I was nervous once. Heroes need luck, and sometimes, a sense of humor."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I’ve heard you liked celebrations—and that people exaggerated your nightlife. Was that fair?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "To a point. We worked hard and played hard. But a vodka toast after landing, a song with comrades—these are normal in Russia. The rumors of excess are mostly invention. My real joy is in flying, laughing, and helping friends."
+    },
+    {
+      "speaker": "Leo",
+      "text": "When you think of mortality—after Komarov, and the dangers you’ve faced—what do you hope endures of your story?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "I want to be remembered not just as a symbol, but as proof that anyone—anyone—can break the boundaries they inherit. And perhaps, for my smile. If people look up and remember to hope, that is enough."
+    },
+    {
+      "speaker": "Leo",
+      "text": "If you could meet future astronauts—those who will go far beyond orbit—what advice would you give them?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Be bold, but never arrogant. Trust your training and your team, cherish your planet, and tell the truth, even if it’s difficult. And never lose your wonder, even if you fly a thousand times further than I did."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You really believe in the ordinary person, don’t you? Even after all your medals?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Medals are cold. People are warm. The real medal is kindness—laughter shared, burdens carried. Sometimes, after speeches, I sneak away to help a gardener or play with a child. It keeps me grounded."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Do you have any rituals for luck beyond the bus tire? Or moments alone before great risks?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Before Vostok, I hummed a song—an old Russian tune. It calmed my heart. I also wrote a letter to Valentina, just in case. I imagine—like traditions everywhere, it isn’t magic, but meaning."
+    },
+    {
+      "speaker": "Leo",
+      "text": "You’ve seen the world from above—do you ever worry humanity will destroy that beauty you saw?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Sometimes. I have said, ‘Let us preserve and increase this beauty, not destroy it.’ The world is so delicate. If I could, I would send all the important men up, just once. It might cure them of foolishness."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Does space travel belong to all people, or just the wealthy and powerful?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "It must belong to all. The stars are not private property. If the cosmos becomes a place only for the rich, we lose the point. Space must unite us, not divide us."
+    },
+    {
+      "speaker": "Leo",
+      "text": "When you meet young pilots, or students who look up to you, what do you tell them?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "I say: work hard, question everything, never lose your curiosity. The world is huge—one lifetime is not enough to see it all. So start now. And never be ashamed to ask for help."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I hope I’m not keeping you from important work… but, last question: what’s the most Russian thing about being a cosmonaut?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Waking up before dawn in the frozen steppe, straps pinching, nerves shaking, someone handing you cold tea and saying, ‘You’ll be fine!’ And the chorus of ‘Na zdorovye!’ from the engineers as you ride to the pad. Suffering, laughter, hope—very Russian."
+    },
+    {
+      "speaker": "Leo",
+      "text": "And if you could choose one moment from this wild adventure to relive, which would it be?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Just one? The second my parachute opened, and I saw I would live. But also, the next night, quietly at home, with my family. The biggest journeys end at the kitchen table."
+    },
+    {
+      "speaker": "Leo",
+      "text": "What did you actually do that first night after landing, once the official celebrations paused?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "I sat on a hospital veranda still wearing borrowed scrubs, sipping cabbage soup the nurses smuggled me. I looked at the stars and thought, \"So that’s where I’ve just been.\" The soup tasted like victory and exhaustion."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Could you even sleep after everything you’d experienced?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Barely. I kept replaying Earth’s curve in my mind—frame by frame—until dawn. When I finally drifted off, I dreamed I was floating above Klushino, waving to my younger self."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "That night, teams of doctors prodded the pioneer for every data point they could, hoping the mysteries of weightlessness might reveal themselves in pulse beats and blood samples."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Did the flight leave any unexpected marks on your body?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Only small ones—a kilo lost, bruises from the ejection straps. The bigger change was invisible: an ache to protect the fragile blue sphere I’d seen from orbit."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I heard you still sneak in the occasional hockey game with the trainees. True?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "When schedules allow, we pour water on the parade ground, let it freeze, and play under the stars. No cameras, just laughter echoing off the hangars."
+    },
+    {
+      "speaker": "Leo",
+      "text": "There’s talk that a woman may soon follow your path. Any thoughts?"
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "The program is training several remarkable women—Tereshkova among them. When she flies, girls everywhere will know the sky is open to them too."
+    },
+    {
+      "speaker": "Yuri Gagarin",
+      "text": "Thank you, Leo. If you ever come back, bring stories from farther into the stars. I think humanity—no, all of us—are only at the very beginning of a great adventure."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Spasibo, Yuri. I’ll remember that. Poyekhali!"
+    },
+    {
+      "speaker": "SFX",
+      "text": "Gentle chuckle, teacup set down, distant aircraft taxi, fading hush, 9s.",
+      "duration": 9
+    }
+  ],
+  "outro": [
+    {
+      "speaker": "Leo",
+      "text": "Walking out of Star City, the world somehow feels at once immense and close. Gagarin’s orbit reminds me: history’s greatest leaps are made by the very human, by the hopeful, by those brave enough to tilt the future on its axis—even if they start with nothing but a smile and a stubborn spirit."
+    },
+    {
+      "speaker": "Narrator",
+      "text": "From Klushino’s muddy fields to the boundless blue, Yuri Gagarin carried more than Soviet banners—he carried childhood scars, honesty, and delight at the universe’s surprise. For a brief moment, he belonged to every dreamer on Earth. His simple courage and laughter remind us: let history make its legends, but let us never forget the person, behind the suit and the smile, who asked the world to lift its eyes. Until next time: Poyekhali. Let’s go."
+    },
+    {
+      "speaker": "SFX",
+      "text": "Warm brass melody with subtle choir and strings swelling then fading, 14s.",
+      "duration": 14
+    }
+  ]
+}

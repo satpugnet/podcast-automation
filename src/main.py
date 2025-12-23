@@ -101,7 +101,7 @@ def main():
         
         # Generate the script
         print(f"🔄 Generating podcast script for {character_name}...")
-        script_path = discussion_script.generate_podcast_script(historical_figure=character_name, background_research=background_research, script_path=script_path)
+        script_path = discussion_script.generate_podcast_script(historical_figure=character_name, background_research=background_research, script_path=script_path, previous_episodes_character_names=os.listdir("output"))
         print(f"✅ Podcast script generated successfully and saved at path: {script_path}")
     
     print(f"🔄 Loading script data from {script_path}...")

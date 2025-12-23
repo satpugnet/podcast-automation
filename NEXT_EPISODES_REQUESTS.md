@@ -10,3 +10,4 @@ Socrates
 Joan of Arc
 Leonardo da Vinci
 Isaac Newton
+Ada Lovelace
