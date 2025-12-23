@@ -6,9 +6,9 @@ A fully automated podcast where an inquisitive Time Traveler named Leo meets hum
 
 ## ⚙️ **Automation Tech Stack**
 
-- **Content Generation**: GPT-4 powered scripting for authentic conversations
-- **Audio Production**: Descript API automation, ElevenLabs AI voices
-- **Transcription**: Whisper AI (accurate, low-cost transcription)
+- **Content Generation**: OpenAI GPT-4 powered scripting for authentic conversations
+- **Audio Production**: ElevenLabs AI voices for text-to-speech and sound effects
+- **Transcription**: ElevenLabs Scribe for accurate transcription with speaker diarization
 - **Podcast Hosting & Distribution**: Transistor.fm (fully automatable)
 
 ---
@@ -16,10 +16,28 @@ A fully automated podcast where an inquisitive Time Traveler named Leo meets hum
 ## 🚀 **Getting Started (Technical)**
 
 1. **Clone Repo**: `git clone [repo link]`
-2. **Install Dependencies**: `npm install` (assuming Node.js setup)
-3. **Configure APIs**: Set up API keys (GPT, Descript, Whisper, Transistor.fm)
-4. **Run Automation Script**: `npm run generate`
-5. **Verify Podcast Deployment**: Automatically publishes to major platforms (Spotify, Apple Podcasts, Google Podcasts, etc.)
+2. **Create Virtual Environment**: 
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. **Install Dependencies**: `pip install -r requirements.txt`
+4. **Configure APIs**: 
+   - Copy `.env.example` to `.env`
+   - Fill in your API keys:
+     - `OPENAI_API_KEY` - Your OpenAI API key
+     - `OPENAI_MODEL` - Model to use (e.g., `gpt-4`, `gpt-4-turbo`, `gpt-4o`)
+     - `ELEVEN_LABS_API_KEY` - Your ElevenLabs API key
+     - `NARRATOR_VOICE_ID` - ElevenLabs voice ID for the narrator
+     - `LEO_VOICE_ID` - ElevenLabs voice ID for Leo (the time traveler)
+     - `TRANSISTOR_FM_API_KEY` - Your Transistor.fm API key (for publishing)
+     - `TRANSISTOR_FM_SHOW_ID` - Your Transistor.fm show ID
+5. **Run the Generator**: `python src/main.py`
+6. **Optional Arguments**:
+   ```bash
+   python src/main.py --character-name "Napoleon Bonaparte"
+   python src/main.py --character-name "Marie Curie" --background-research-path "research.txt"
+   ```
 
 ---
 
